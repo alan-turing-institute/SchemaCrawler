@@ -1,0 +1,1284 @@
+<!doctype html>
+<html lang="en-US">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="copyright" content="&copy; 2000-2018 Sualeh Fatehi." />
+      <!-- Begin SEO -->
+      <title>SchemaCrawler - Free database schema discovery and comprehension tool</title>
+      <meta property="og:title" content="SchemaCrawler" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="description" content="Free database schema discovery and comprehension tool" />
+      <meta property="og:description" content="Free database schema discovery and comprehension tool" />
+      <link rel="canonical" href="https://sualeh.github.io/SchemaCrawler/" />
+      <meta property="og:url" content="https://www.SchemaCrawler.com" />
+      <meta property="og:site_name" content="SchemaCrawler" />
+      <script type="application/ld+json">
+         {
+         "name":"SchemaCrawler",
+         "description":"Free database schema discovery and comprehension tool","
+         author":"Sualeh Fatehi",
+         "@type":"WebSite",
+         "url":"https://www.SchemaCrawler.com",
+         "logo":"https://sualeh.github.io/SchemaCrawler/images/schemacrawler_logo.svg",
+         "headline":"SchemaCrawler",
+         "sameAs": [
+             "https://www.facebook.com/schemacrawler/",
+             "https://www.linkedin.com/company/2826059/"
+         ],
+         "@context":"http://schema.org"
+         }
+      </script>
+      <!-- End SEO -->
+      <!-- Bootstrap 4.0 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+         crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+         crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+         crossorigin="anonymous"></script>
+      <!-- Lightbox -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+      <!--  SchemaCrawler styles -->
+      <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+     <header class="header clearfix">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+           <!-- Links -->
+           <ul class="navbar-nav">
+              <li class="nav-item">
+                 <a class="nav-link" href="consulting.html">Consulting</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-1" data-toggle="dropdown">
+                 SchemaCrawler
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">About SchemaCrawler</a>
+                    <a class="dropdown-item" href="readme.html">Readme</a>
+                    <a class="dropdown-item" href="who-uses.html">Who Uses</a>
+                    <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
+                    <a class="dropdown-item" href="database-support.html">Database System Support</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+                    <a class="dropdown-item" href="changes-report.html">Change History</a>
+                    <a class="dropdown-item" href="license.html">License</a>
+                    <a class="dropdown-item" href="building.html">Building From Source Code</a>
+                    <a class="dropdown-item" href="consulting.html">Support and Consulting</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-2" data-toggle="dropdown">
+                 Features
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="output.html">Text Output</a>
+                    <a class="dropdown-item" href="diff.html">Diff</a>
+                    <a class="dropdown-item" href="schemacrawler_grep.html">Grep</a>
+                    <a class="dropdown-item" href="diagramming.html">Diagramming</a>
+                    <a class="dropdown-item" href="scripting.html">Scripting</a>
+                    <a class="dropdown-item" href="lint.html">Lint</a>
+                    <a class="dropdown-item" href="weak-associations.html">Weak Associations</a>
+                    <a class="dropdown-item" href="offline.html">Offline Snapshots</a>
+                    <a class="dropdown-item" href="plugins.html">Plugins</a>
+                    <a class="dropdown-item" href="data-dictionary-extensions.html">Extensions Using the Data Dictionary</a>
+                    <a class="dropdown-item" href="report-maven-plugin.html">SchemaCrawler Report Maven Plugin</a>
+                    <a class="dropdown-item" href="webapp.html">SchemaCrawler Web Application</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-3" data-toggle="dropdown">
+                 Resources
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="readme.html">Getting Started</a>
+                    <a class="dropdown-item" href="resources.html">Resources</a>
+                    <a class="dropdown-item" href="code-examples.html">Code Examples</a>
+                    <a class="dropdown-item" href="faq.html">FAQS</a>
+                    <a class="dropdown-item" href="how-to.html">How-tos</a>
+                    <a class="dropdown-item" href="consulting.html">Get Help</a>
+                    <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler">Project Page on GitHub</a>
+                 </div>
+              </li>
+           </ul>
+        </nav>
+
+        <div id="banner" class="jumbotron jumbotron-fluid bg-light">
+          <div class="container-fluid">
+            <img class="img-fluid" style="display: block; float: left; width: 8.0rem;" src="images/schemacrawler_logo.svg" alt="Schemacrawler logo" />
+            <h1>SchemaCrawler</h1>
+            <p class="lead">Free database schema discovery and comprehension tool</p>
+          </div>
+        </div>
+
+     </header>
+
+     <main>
+        <div id="page-content" class="container-fluid">
+
+<!-- PAGE CONTENT -- START -->
+
+<h1>SchemaCrawler Change History</h1>
+<p><a name="a14.21.02"></a></p>
+<h2>Release 14.21.02 - 2018-05-21</h2>
+<ul>
+<li>Add support for java.sql.Types REF_CURSOR, TIME_WITH_TIMEZONE, and TIMESTAMP_WITH_TIMEZONE</li>
+<li>Fixed issue with lint reporting &ldquo;unique index with nullable columns&rdquo; on computed columns</li>
+</ul>
+<p><a name="a14.21.01"></a></p>
+<h2>Release 14.21.01 - 2018-05-14</h2>
+<ul>
+<li>Fixed issue #184 with with support for older Oracle versions in the SchemaCrawler Oracle plugin</li>
+<li>Changed API for SchemaCrawler plugins</li>
+</ul>
+<p><a name="a14.20.06"></a></p>
+<h2>Release 14.20.06 - 2018-05-02</h2>
+<ul>
+<li>Fixed issue #181 with more control (and configuration) over graph generation</li>
+</ul>
+<p><a name="a14.20.05"></a></p>
+<h2>Release 14.20.05 - 2018-04-19</h2>
+<ul>
+<li>Fixed issue #178 with JSON data generation</li>
+</ul>
+<p><a name="a14.20.04"></a></p>
+<h2>Release 14.20.04 - 2018-04-04</h2>
+<ul>
+<li>Docker image updated with non-root user, and documentation updated for latest Docker version</li>
+</ul>
+<p><a name="a14.20.03"></a></p>
+<h2>Release 14.20.03 - 2018-03-10</h2>
+<ul>
+<li>Website updates</li>
+</ul>
+<p><a name="a14.20.02"></a></p>
+<h2>Release 14.20.02 - 2018-03-07</h2>
+<ul>
+<li>Upgrade to support Apache Velocity 2.0.</li>
+<li>Added remarks for tables and columns to Microsoft SQL Server test schema.</li>
+</ul>
+<p><a name="a14.20.01"></a></p>
+<h2>Release 14.20.01 - 2018-03-05</h2>
+<ul>
+<li>Make -routines return no routines by default, to make it easier for first-time users.</li>
+<li>Support a pure Java implementation of Graphviz (nidi3/graphviz-java), for cases where Graphviz cannot be installed.</li>
+<li>Changed CommandProvider API</li>
+</ul>
+<p><a name="a14.19.01"></a></p>
+<h2>Release 14.19.01 - 2018-02-04</h2>
+<ul>
+<li>Fixing bug when retrieving Oracle procedure metadata</li>
+<li>Adding test support for routines</li>
+<li>Adding test code for retrieving result set metadata</li>
+</ul>
+<p><a name="a14.18.01"></a></p>
+<h2>Release 14.18.01 - 2018-01-10</h2>
+<ul>
+<li>Ignore MariaDb driver for MySQL if both are on the classpath.</li>
+<li>Verify support for unnamed primary keys and foreign keys.</li>
+<li>Support unnamed foreign keys.</li>
+<li>System to build reference schema for most common databases.</li>
+<li>Tests for unusual data types, user-defined data types, domains and temporary tables.</li>
+<li>Support for generating SQLite database from scripts.</li>
+<li>Added tests for ascending and descending columns in indexes.</li>
+<li>Getting MySQL plugin to support MariaDB as well</li>
+<li>Consistent treatment for hidden and generated table columns, with special marking in details output</li>
+<li>Support for Oracle 12c identity or auto-incremented columns</li>
+</ul>
+<p><a name="a14.17.05"></a></p>
+<h2>Release 14.17.05 - 2017-12-28</h2>
+<ul>
+<li>Website updates, including link to the SchemaCrawler Web Application.</li>
+</ul>
+<p><a name="a14.17.04"></a></p>
+<h2>Release 14.17.04 - 2017-12-10</h2>
+<ul>
+<li>Removing index unquoting work-around for old versions of the SQLite JDBC driver, and distributing with the latest driver.</li>
+<li>Making SQL type map a database specific property, which can be overridden by database plugins.</li>
+<li>Moving website to GitHub pages.</li>
+</ul>
+<h2>Release 14.17.03 - 2017-11-21</h2>
+<p><a name="a14.17.03"></a></p>
+<ul>
+<li>Fixing a regression with SQLite databases created with double-quoted identifiers.</li>
+</ul>
+<h2>Release 14.17.02 - 2017-11-20</h2>
+<p><a name="a14.17.02"></a></p>
+<ul>
+<li>Fix for broken API call in Maven archetype.</li>
+<li>Update to Apache Velocity example to quote database object names.</li>
+</ul>
+<h2>Release 14.17.01 - 2017-11-19</h2>
+<p><a name="a14.17.01"></a></p>
+<ul>
+<li>Database objects getName() returns unquoted names, and getFullName() returns a name quoted using default quoting rules. Text output is controlled by the schemacrawler.format.identifier_quoting_strategy configuration property.</li>
+<li>Support for SQLite named foreign keys, auto-incremented columns, and more, with the latest JDBC driver for SQLite.</li>
+<li>Exclude database system schemas by default.</li>
+<li>Make -infolevel an optional command-line argument, and default to standard.</li>
+<li>Make -routines return no routines by default, to make it easier for first-time users.</li>
+<li>Show just SchemaCrawler information by default in the output, and not database and JDBC driver information. Add fine-tuned options for each.</li>
+<li>Adding some security lock-downs to XStream serialization.</li>
+</ul>
+<h2>Release 14.16.04 - 2017-09-25</h2>
+<p><a name="a14.16.04"></a></p>
+<ul>
+<li>Updating dependencies.</li>
+<li>Bug-fix for Oracle routines.</li>
+</ul>
+<h2>Release 14.16.03 - 2017-07-08</h2>
+<p><a name="a14.16.03"></a></p>
+<ul>
+<li>Updating dependencies.</li>
+</ul>
+<h2>Release 14.16.02 - 2017-06-20</h2>
+<p><a name="a14.16.02"></a></p>
+<ul>
+<li>Bug fix for an issue with retrieving SQLite primary keys if the DDL used quoted names.</li>
+<li>Moved Sybase IQ plugin to new GitHub project.</li>
+</ul>
+<h2>Release 14.16.01 - 2017-04-10</h2>
+<p><a name="a14.16.01"></a></p>
+<ul>
+<li>Better protection of user credentials in memory.</li>
+<li>Support for index remarks.</li>
+<li>Organize metadata views for extensibility. Please refer to <a href="http://sualeh.github.io/SchemaCrawler/data-dictionary-extensions.html">http://sualeh.github.io/SchemaCrawler/data-dictionary-extensions.html</a></li>
+<li>Remove reliance on Java 8 features where they add an overhaead.</li>
+</ul>
+<h2>Release 14.15.04 - 2017-04-02</h2>
+<p><a name="a14.15.04"></a></p>
+<ul>
+<li>Added foreign key retrieval strategies, and exposed overrides in configuration properties.</li>
+</ul>
+<h2>Release 14.15.03 - 2017-03-28</h2>
+<p><a name="a14.15.03"></a></p>
+<ul>
+<li>Added table retrieval strategies, and exposed overrides in configuration properties.</li>
+</ul>
+<h2>Release 14.15.02 - 2017-03-23</h2>
+<p><a name="a14.15.02"></a></p>
+<ul>
+<li>Clarified licensing terms.</li>
+</ul>
+<h2>Release 14.15.01 - 2017-03-21</h2>
+<p><a name="a14.15.01"></a></p>
+<ul>
+<li>Fixed licenses published in jar files and on Maven Central.</li>
+<li>Cleaner description of column data types.</li>
+</ul>
+<h2>Release 14.14.04 - 2017-03-11</h2>
+<p><a name="a14.14.04"></a></p>
+<ul>
+<li>Better and more efficient logging and error messages.</li>
+<li>Added short forms, -fmt for -outputformat command-line option, and -i for -infolevel.</li>
+<li>Made the output format command-line option optional. The output format is derived from the output file extension if it is not explicitly provided.</li>
+</ul>
+<h2>Release 14.14.03 - 2017-02-23</h2>
+<p><a name="a14.14.03"></a></p>
+<ul>
+<li>Java utility class to parse enum values from column.getAttribute(&ldquo;COLUMN_TYPE&rdquo;), for MySQL.</li>
+<li>Better error message for bad commands.</li>
+</ul>
+<h2>Release 14.14.02 - 2017-02-08</h2>
+<p><a name="a14.14.02"></a></p>
+<ul>
+<li>To get the enum values from column.getAttribute(&ldquo;COLUMN_TYPE&rdquo;), run SchemaCrawler for MySQL with -infolevel=maximum.</li>
+<li>New SchemaCrawler for SQLite utility, schemacrawler.tools.sqlite.SchemaCrawlerSQLiteUtility.</li>
+</ul>
+<h2>Release 14.14.01 - 2017-01-11</h2>
+<p><a name="a14.14.01"></a></p>
+<ul>
+<li>The graph command is removed. Graphs are generated based on the output format.</li>
+</ul>
+<h2>Release 14.12.01 - 2016-12-24</h2>
+<p><a name="a14.12.01"></a></p>
+<ul>
+<li>New command-line option to show weak associations, irrespective of the infolevel.</li>
+<li>Changed the boolean property, schemacrawler.format.hide_weak_associations to schemacrawler.format.show_weak_associations, since weak associations are hidden by default in SchemaCrawler output. Also added a new command-line switch, -weakassociations to show weak associations. Weak associations now can be shown with any infolevel setting.</li>
+</ul>
+<h2>Release 14.11.02 - 2016-12-20</h2>
+<p><a name="a14.11.02"></a></p>
+<ul>
+<li>Support for the Teradata JDBC driver. The Teradata JDBC driver does not follow JDBC specifications. It should throw a SQLFeatureNotSupportedException for getFunctions, or at the least a SQLException state HYC00 (&ldquo;Optional feature not implemented&rdquo;). Instead, it throws with a state of HY000 (&ldquo;General error&rdquo;).</li>
+</ul>
+<h2>Release 14.11.01 - 2016-12-16</h2>
+<p><a name="a14.11.01"></a></p>
+<ul>
+<li>Show a better error message when a script file cannot be read.</li>
+<li>Handle SQLException when retrieving JDBC driver information.</li>
+<li>Extended copyright messages through 2017.</li>
+</ul>
+<h2>Release 14.10.06 - 2016-10-29</h2>
+<p><a name="a14.10.06"></a></p>
+<ul>
+<li>Made OfflineSnapshotExecutable constructor public, so that offline snapshots can be loaded programatically.</li>
+</ul>
+<h2>Release 14.10.05 - 2016-10-26</h2>
+<p><a name="a14.10.05"></a></p>
+<ul>
+<li>Fixed issue with generating SQLite diagrams.</li>
+<li>Distribution now contains an example SQLite database.</li>
+<li>Fail if the SQLite database does not exist.</li>
+</ul>
+<h2>Release 14.10.04 - 2016-10-23</h2>
+<p><a name="a14.10.04"></a></p>
+<ul>
+<li>Fixed issue with loading of JDBC drivers.</li>
+</ul>
+<h2>Release 14.10.03 - 2016-10-01</h2>
+<p><a name="a14.10.03"></a></p>
+<ul>
+<li>Fixed formatting of multi-line column remarks in HTML output.</li>
+</ul>
+<h2>Release 14.10.02 - 2016-09-17</h2>
+<p><a name="a14.10.02"></a></p>
+<ul>
+<li>New lint to recommend that a surrogate key column be used as a primary key.</li>
+<li>Fixed lint that checks foreign key and primary key data types.</li>
+<li>Additional documentation on how to connect to Microsoft SQL Server with Windows authentication.</li>
+</ul>
+<h2>Release 14.10.01 - 2016-08-31</h2>
+<p><a name="a14.10.01"></a></p>
+<ul>
+<li>Support for newlines in table and column comments.</li>
+<li>Ability to read default configuration settings from the classpath, from a file called schemacrawler.config.properties. This file is distributed in the lib/ folder.</li>
+<li>Removed command-line option -p to specify an additional configuration file.</li>
+<li>Added documentation on how to do programmatic diff of schemas on the website. Added code examples to the website.</li>
+</ul>
+<h2>Release 14.09.03 - 2016-08-01</h2>
+<p><a name="a14.09.03"></a></p>
+<ul>
+<li>A new configuration options <code>schemacrawler.format.no_schema_colors</code> if you do not want to show catalog and schema colors.</li>
+</ul>
+<h2>Release 14.09.02 - 2016-07-14</h2>
+<p><a name="a14.09.02"></a></p>
+<ul>
+<li>Allow primary keys to be retrieved in bulk, to speed up Oracle execution.</li>
+</ul>
+<h2>Release 14.09.01 - 2016-06-29</h2>
+<p><a name="a14.09.01"></a></p>
+<ul>
+<li>The MariaDB driver interferes with the use of the MySQL driver, so it is no longer distributed.</li>
+<li>Fixing null pointer exception for table types, by introducing an unknown table type.</li>
+</ul>
+<h2>Release 14.08.02 - 2016-05-16</h2>
+<p><a name="a14.08.02"></a></p>
+<ul>
+<li>Adding hidden columns in a separate list, accessed with a new method, Table.getHiddenColuns().</li>
+<li>Allow table constraint definitions to be obtained separately from table constraint information.</li>
+</ul>
+<h2>Release 14.08.01 - 2016-05-04</h2>
+<p><a name="a14.08.01"></a></p>
+<ul>
+<li>Improved performance with Oracle, by substituting schemas.</li>
+</ul>
+<h2>Release 14.07.08 - 2016-04-14</h2>
+<p><a name="a14.07.08"></a></p>
+<ul>
+<li>Removing linter for surrogate keys, since it is of dubious value.</li>
+</ul>
+<h2>Release 14.07.07 - 2016-04-08</h2>
+<p><a name="a14.07.07"></a></p>
+<ul>
+<li>Added a new boolean property, schemacrawler.format.hide_weak_associations, to hide weak associations in SchemaCrawler output.</li>
+</ul>
+<h2>Release 14.07.06 - 2016-03-26</h2>
+<p><a name="a14.07.06"></a></p>
+<ul>
+<li>Making SchemaCrawler available under the Eclipse Public License, in addition to the GPL and LGPL.</li>
+<li>Fixing ability to run SQL from the command-line.</li>
+</ul>
+<h2>Release 14.07.05 - 2016-03-19</h2>
+<p><a name="a14.07.05"></a></p>
+<ul>
+<li>More detailed examples of how to use the SchemaCrawler API from script.</li>
+<li>Fixing a bug with the default linter threshold.</li>
+</ul>
+<h2>Release 14.07.04 - 2016-03-16</h2>
+<p><a name="a14.07.04"></a></p>
+<ul>
+<li>Lint enhancements to dispatch.</li>
+</ul>
+<h2>Release 14.07.03 - 2016-03-10</h2>
+<p><a name="a14.07.03"></a></p>
+<ul>
+<li>Add details of lints that were dispatched, before the dispatch takes place.</li>
+</ul>
+<h2>Release 14.07.02 - 2016-02-27</h2>
+<p><a name="a14.07.02"></a></p>
+<ul>
+<li>Support for Compact Profile 2.</li>
+<li>Adding dispatch strategies for lint. This allows the SchemaCrawler command-line to fail with an exit code from the command-line when there are too many lints.</li>
+</ul>
+<h2>Release 14.06.05 - 2016-02-14</h2>
+<p><a name="a14.06.05"></a></p>
+<ul>
+<li>Bug fix for bug while retrieving metadata.</li>
+</ul>
+<h2>Release 14.06.04 - 2016-02-14</h2>
+<p><a name="a14.06.04"></a></p>
+<ul>
+<li>Complete support for Oracle hidden columns. Hidden columns are indicated with Table.isHidden(). Similarly, generated columns (including Oracle function-based columns) are indicated with Table.isGenerated(). You can get a complete list of all table columns, including hidden columns, with Table.getColumns(), if you have used the &ldquo;maximum&rdquo; schema info-level.</li>
+</ul>
+<h2>Release 14.06.03 - 2016-02-10</h2>
+<p><a name="a14.06.03"></a></p>
+<ul>
+<li>Support for Oracle function-based indexes.</li>
+</ul>
+<h2>Release 14.06.02 - 2016-02-10</h2>
+<p><a name="a14.06.02"></a></p>
+<ul>
+<li>Distributing correct versions of JDBC driver jars.</li>
+<li>Performance boost by using Oracle data dictionary query for table indexes. Idea courtesy of Patric Rufflar.</li>
+</ul>
+<h2>Release 14.06.01 - 2016-02-08</h2>
+<p><a name="a14.06.01"></a></p>
+<ul>
+<li>Added table row counts in output and diagrams. Use schemacrawler.format.show_row_counts=true in the configuration file.</li>
+<li>Significant performance improvements in Java code, especially related to logging. Idea courtesy of Patric Rufflar.</li>
+<li>Performance boost by using Oracle data dictionary query for table columns. Idea courtesy of Patric Rufflar.</li>
+</ul>
+<h2>Release 14.10.06 - 2016-02-03</h2>
+<p><a name="a14.10.06"></a></p>
+<ul>
+<li>Fixed logging for features that the JDBC driver does not support.</li>
+<li>Added utility to filter tables based on &ldquo;raw&rdquo; name.</li>
+<li>Updating JDBC drivers and dependencies.</li>
+</ul>
+<h2>Release 14.05.04 - 2015-12-03</h2>
+<p><a name="a14.05.04"></a></p>
+<ul>
+<li>Fixed weak references, and logging for offline databases.</li>
+</ul>
+<h2>Release 14.05.03 - 2015-12-02</h2>
+<p><a name="a14.05.03"></a></p>
+<ul>
+<li>Added new quickdump command, which works with -infolevel=minimum, though row order is not guaranteed.</li>
+</ul>
+<h2>Release 14.05.02 - 2015-11-26</h2>
+<p><a name="a14.05.02"></a></p>
+<ul>
+<li>Externalized logic to quote and unquote database object identifiers.</li>
+</ul>
+<h2>Release 14.05.01 - 2015-11-14</h2>
+<p><a name="a14.05.01"></a></p>
+<ul>
+<li>Fix default log level.</li>
+<li>Fix who uses SchemaCrawler list.</li>
+<li>Fix database plugin archetype.</li>
+<li>Sealing internal packages.</li>
+</ul>
+<h2>Release 14.04.04 - 2015-10-31</h2>
+<p><a name="a14.04.04"></a></p>
+<ul>
+<li>Fix for retrieving PostgreSQL triggers.</li>
+<li>More efficient table column retrieval in IBM DB2.</li>
+<li>Added tests for unique constraints, and user-defined data types.</li>
+<li>Fixed output for base data-types.</li>
+</ul>
+<h2>Release 14.04.03 - 2015-10-19</h2>
+<p><a name="a14.04.03"></a></p>
+<ul>
+<li>Overrides to foreign key retrieval, for more efficient IBM DB2 crawling.</li>
+</ul>
+<h2>Release 14.04.02 - 2015-10-11</h2>
+<p><a name="a14.04.02"></a></p>
+<ul>
+<li>Detailed timing information in logs.</li>
+</ul>
+<h2>Release 14.04.01 - 2015-10-11</h2>
+<p><a name="a14.04.01"></a></p>
+<ul>
+<li>Fixing broken -urlx switch.</li>
+<li>Reworked command-line processing, and database plugins.</li>
+<li>Removed Apache Derby database plugin. Apache Derby is now supported using a database URL only.</li>
+<li>Added MariaDB database plugin.</li>
+</ul>
+<h2>Release 14.03.03 - 2015-09-20</h2>
+<p><a name="a14.03.03"></a></p>
+<ul>
+<li>An attempt at faster retrieval of foreign keys in Oracle.</li>
+</ul>
+<h2>Release 14.03.02 - 2015-09-17</h2>
+<p><a name="a14.03.02"></a></p>
+<ul>
+<li>Better excludes for system schemas in Oracle.</li>
+<li>Added ability to report on tables causing a cycle in a lint, using Tarjan&rsquo;s algorithm.</li>
+</ul>
+<h2>Release 14.03.01 - 2015-08-17</h2>
+<p><a name="a14.03.01"></a></p>
+<ul>
+<li>Added detailed lint help, which is available from the command-line, using -help -command=lint.</li>
+<li>Added configuration for LinterTooManyLobs.</li>
+<li>Added new lint for specifying a list of reserved words for column names.</li>
+<li>Added new lints for empty tables, tables where all columns are nullable, and tables with no primary keys.</li>
+<li>New SchemaCrawlerUtility methods to get database system specific functionality.</li>
+<li>Renaming CrawlHeaderInfo to CrawlInfo, and making it available in linters.</li>
+<li>Fixed issues with sorting tables and routines alphabetically. Sorting alphabetically also sorts by object type.</li>
+</ul>
+<h2>Release 14.02.02 - 2015-08-14</h2>
+<p><a name="a14.02.02"></a></p>
+<ul>
+<li>Added new lints for empty tables, tables where all columns are nullable, and tables with no primary keys.</li>
+</ul>
+<h2>Release 14.02.01 - 2015-08-10</h2>
+<p><a name="a14.02.01"></a></p>
+<ul>
+<li>Added a custom SQL Lint, to allow for data lints.</li>
+<li>New lint command-line option, -linterconfigs=<path> to specify the location of the linter XML configuration file.</li>
+<li>Ability to specify table inclusion rules for lints.</li>
+</ul>
+<h2>Release 14.01.02 - 2015-07-28</h2>
+<p><a name="a14.01.02"></a></p>
+<ul>
+<li>Bug fix for connecting to a database using a URL.</li>
+</ul>
+<h2>Release 14.01.01 - 2015-07-16</h2>
+<p><a name="a14.01.01"></a></p>
+<ul>
+<li>SchemaCrawler is now supported on Java SE 8 or better only.</li>
+<li>The SchemaCrawler project has been moved to GitHub.</li>
+<li>Database specific overrides are not not in SchemaCrawlerOptions, and can be passed in along with the database connection if needed.</li>
+<li>SchemaCrawler has a new project to demonstrate how to programatically diff schemas.</li>
+<li>New -title command-line argument to show a custom title on output and diagrams.</li>
+<li>Methods to get database objects by name are renamed to lookup, and return Optional. This allows calling code to handle nulls.</li>
+<li>Sequences are color-coded by schema like the rest of the database objects.</li>
+<li>Rename indices to indexes consistently in method names.</li>
+<li>All references to parent objects are soft references, to allow for more efficient memory management and serialization.</li>
+<li>All references to parent objects are soft references, to allow for more efficient memory management and serialization.</li>
+<li>Shell scripts sc.sh and sc.cmd renamed to schemacrawler.sh and schemacrawler.cmd, since they clash with system utilities.</li>
+</ul>
+<h2>Release 12.06.03 - 2015-03-27</h2>
+<p><a name="a12.06.03"></a></p>
+<ul>
+<li>Showing cardinality for tables that are filtered out.</li>
+</ul>
+<h2>Release 12.06.02 - 2015-03-26</h2>
+<p><a name="a12.06.02"></a></p>
+<ul>
+<li>Fixing links on website.</li>
+<li>Fixing diagram to show hanging arrows for referenced tables.</li>
+</ul>
+<h2>Release 12.06.01 - 2015-03-24</h2>
+<p><a name="a12.06.01"></a></p>
+<ul>
+<li>Hyperlinks in HTML output from foreign keys to tables.</li>
+<li>Lighter colors for tables, consistent in both HTML and graph output. Colors are assigned per catalog and schema.</li>
+<li>Foreign key cardinality in HTML and text output.</li>
+<li>New command-line option to remove empty tables (with no rows of data) from output -hideemptytables</li>
+<li>Not showing database password in command-line logs.</li>
+<li>Showing database server and JDBC driver in logs.</li>
+</ul>
+<h2>Release 12.05.02 - 2015-03-17</h2>
+<p><a name="a12.05.02"></a></p>
+<ul>
+<li>Better identification of weak associations.</li>
+<li>Showing routine parameter names in JSON.</li>
+</ul>
+<h2>Release 12.05.01 - 2015-03-14</h2>
+<p><a name="a12.05.01"></a></p>
+<ul>
+<li>Better identification of weak associations.</li>
+</ul>
+<h2>Release 12.04.02 - 2015-02-10</h2>
+<p><a name="a12.04.02"></a></p>
+<ul>
+<li>Fix bug with connecting to Oracle.</li>
+</ul>
+<h2>Release 12.04.01 - 2015-01-18</h2>
+<p><a name="a12.04.01"></a></p>
+<ul>
+<li>Reverting back to SQLite JDBC driver version 3.7.8, since that is the most stable, even if not readily available.</li>
+<li>Refactored API for reading input files, such as scripts.</li>
+<li>Made compressed file format the default for offline snapshots.</li>
+</ul>
+<h2>Release 12.03.02 - 2015-01-18</h2>
+<p><a name="a12.03.02"></a></p>
+<ul>
+<li>Removed the -driver command-line option, since most JDBC drivers will register themselves automatically.</li>
+<li>Made sure that a JDBC driver for a database server is available, before the -server command-line option is valid for that server.</li>
+</ul>
+<h2>Release 12.03.01 - 2015-01-02</h2>
+<p><a name="a12.03.01"></a></p>
+<ul>
+<li>Added -noremarks command-line option to hide table and column remarks (or comments).</li>
+<li>Using a stable version of the Xerial SQLite JDBC driver that is readily available on Maven Central. This does not support retrieving primary key names.</li>
+<li>Removed built-in support for ant tasks, since there is not way to omit an option if one is not specified.</li>
+<li>Changed copyright to 2015.</li>
+<li>New parser for command-line options.</li>
+</ul>
+<h2>Release 12.02.03 - 2014-12-25</h2>
+<p><a name="a12.02.03"></a></p>
+<ul>
+<li>Integration with Thymeleaf templating.</li>
+<li>Flushing of output.</li>
+</ul>
+<h2>Release 12.02.02 - 2014-12-24</h2>
+<p><a name="a12.02.02"></a></p>
+<ul>
+<li>Better logging of execution.</li>
+<li>Quicker execution when routines are not output.</li>
+</ul>
+<h2>Release 12.02.01 - 2014-12-21</h2>
+<p><a name="a12.02.01"></a></p>
+<ul>
+<li>New output format, htmlx, which embeds database diagrams into an HTML file. The diagrams are in SVG format.</li>
+<li>Converted all HTML output to HTML5.</li>
+<li>Null-checks now throw NullPointerException, instead of IllegalArgumentException.</li>
+<li>Tested support of international character sets in table names and column names.</li>
+<li>Converting filter classes to Predicate, to prepare for Java 8 support.</li>
+<li>Converted all file operations to use Java Path, for better error handling.</li>
+</ul>
+<h2>Release 12.01.01 - 2014-11-27</h2>
+<p><a name="a12.01.01"></a></p>
+<ul>
+<li>Collapsed distribution into a single distribution download, with Apache Ant Ivy scripts for downloading additional dependencies. A new -server command-line option will connect to a database with built-in support.</li>
+<li>Added Maven archetypes for database server plugins.</li>
+<li>Building Debian package as part of the main distributable.</li>
+<li>Added support for the H2 Database Engine.</li>
+<li>Changes direction of arrow for foreign keys in text output, to always point to the primary key.</li>
+<li>Made consistent CSS stylesheets for examples, website, and HTML text output.</li>
+<li>Fixed issues with retrieving functions from H2 Database Engine.</li>
+<li>Standardized CSS styles between the website, example readmes, and SchemaCrawler HTML output.</li>
+</ul>
+<h2>Release 11.02.01 - 2014-11-04</h2>
+<p><a name="a11.02.01"></a></p>
+<ul>
+<li>Added options to hide cardinality in graphs.</li>
+<li>Added Maven archetypes for plugins.</li>
+</ul>
+<h2>Release 11.01.01 - 2014-09-21</h2>
+<p><a name="a11.01.01"></a></p>
+<ul>
+<li>Changed Maven groupId to us.fatehi.</li>
+<li>Renamed Database class to Catalog.</li>
+<li>Changed all output formats to include table and column remarks whenever available.</li>
+<li>Added command-line option options to show significant columns, such as primary and foreign key columns, and columns that are part of unique indexes. Use the <code>-infolevel=standard -command=brief</code> command-line options.</li>
+<li>Indicate auto-incremented columns in graph and other output.</li>
+</ul>
+<h2>Release 10.10.05 - 2014-08-04</h2>
+<p><a name="a10.10.05"></a></p>
+<ul>
+<li>Fixed bug with weak associations in diagrams being drawn twice.</li>
+<li>Added more variations of diagrams to website.</li>
+</ul>
+<h2>Release 10.10.04 - 2014-07-27</h2>
+<p><a name="a10.10.04"></a></p>
+<ul>
+<li>Fixed bug with cardinality in diagrams, when a foreign key is only a part of the primary key of a table.</li>
+<li>Fixed -sequences command-line argument, and got it to work correctly with the properties file.</li>
+</ul>
+<h2>Release 10.10.03 - 2014-07-06</h2>
+<p><a name="a10.10.03"></a></p>
+<ul>
+<li>Added support for include and exclude expressions for synonyms and sequences in config properties files.</li>
+</ul>
+<h2>Release 10.10.02 - 2014-07-02</h2>
+<p><a name="a10.10.02"></a></p>
+<ul>
+<li>Added support for auto-incremented columns, and generated columns.</li>
+</ul>
+<h2>Release 10.10.01 - 2014-06-22</h2>
+<p><a name="a10.10.01"></a></p>
+<ul>
+<li>Added support for sequences.</li>
+</ul>
+<h2>Release 10.09.01 - 2014-05-14</h2>
+<p><a name="a10.09.01"></a></p>
+<ul>
+<li>Fixed table type to be based on a string, not an enum. See <a href="http://sourceforge.net/p/schemacrawler/discussion/495990/thread/09186044">http://sourceforge.net/p/schemacrawler/discussion/495990/thread/09186044</a> for details.</li>
+<li>Changed the object inheritance of a privilege, so that it is not a database object.</li>
+</ul>
+<h2>Release 10.08.05 - 2014-04-25</h2>
+<p><a name="a10.08.05"></a></p>
+<ul>
+<li>Fixed lint &ldquo;foreign key with no index&rdquo; to look at primary keys as well.</li>
+<li>Fixed bug #31, <a href="https://sourceforge.net/p/schemacrawler/bugs/31/">https://sourceforge.net/p/schemacrawler/bugs/31/</a>, for loading XML databases.</li>
+<li>Fixed MySQL connection issue, by removing URL parameter &ldquo;useInformationSchema=true&rdquo; so that MySQL&rsquo;s buggy metadata provider is not used. This provider does not honor mixed-case tables names.</li>
+</ul>
+<h2>Release 10.08.04 - 2014-04-03</h2>
+<p><a name="a10.08.04"></a></p>
+<ul>
+<li>Column sort options sort columns in dumps also.</li>
+<li>Added generation date to database diagram.</li>
+</ul>
+<h2>Release 10.08.03 - 2014-03-24</h2>
+<p><a name="a10.08.03"></a></p>
+<ul>
+<li>Made extra columns provided in all information schema views available as attributes of SchemaCrawler Java objects.</li>
+<li>Added table definition metadata for Oracle.</li>
+<li>Allow for code to be executed before and after the crawl. This is in the form of pre- and post- executables.</li>
+<li>Added foreign key definition metadata for Oracle.</li>
+<li>Fixed DDL metadata for Oracle, so that it is portable.</li>
+<li>Converted code to Git.</li>
+</ul>
+<h2>Release 10.08.02 - 2013-12-28</h2>
+<p><a name="a10.08.02"></a></p>
+<ul>
+<li>Updated copyright notices.</li>
+<li>Fixed javadocs, using standard Java 7 stylesheet.</li>
+</ul>
+<h2>Release 10.08.01 - 2013-11-17</h2>
+<p><a name="a10.08.01"></a></p>
+<ul>
+<li>Trim all table names, to allow Informix to match correctly.</li>
+</ul>
+<h2>Release 10.8 - 2013-11-10</h2>
+<p><a name="a10.8"></a></p>
+<ul>
+<li>Providing richer information about table constraints, including details of constrained columns.</li>
+</ul>
+<h2>Release 10.7 - 2013-11-05</h2>
+<p><a name="a10.7"></a></p>
+<ul>
+<li>Providing richer information about table constraints. Renaming check constraints to table constraints.</li>
+<li>Worked abound ArrayIndexOutOfBoundsException in MySQL connector with connector 5.1.26 and server version 5.0.95. See <a href="https://sourceforge.net/p/schemacrawler/patches/5/">https://sourceforge.net/p/schemacrawler/patches/5/</a></li>
+</ul>
+<h2>Release 10.6 - 2013-10-30</h2>
+<p><a name="a10.6"></a></p>
+<ul>
+<li>Changed InclusionRule to an interface, to allow custom implementations.</li>
+<li>Fixed lack of support for type maps by the Sybase IQ database driver.</li>
+</ul>
+<h2>Release 10.5 - 2013-09-24</h2>
+<p><a name="a10.5"></a></p>
+<ul>
+<li>Fixed bug with table restrictions.</li>
+<li>Support all command-line options in ant task.</li>
+</ul>
+<h2>Release 10.4 - 2013-07-24</h2>
+<p><a name="a10.4"></a></p>
+<ul>
+<li>Fixed view definitions for PostgreSQL.</li>
+<li>Fixed retrieving index metadata for tables, working around PostgreSQL bugs #3480 and #6253.</li>
+<li>Added retrieving index definitions for PostgreSQL and Oracle.</li>
+<li>Added retrieving view definitions for Apache Derby.</li>
+</ul>
+<h2>Release 10.3 - 2013-05-24</h2>
+<p><a name="a10.3"></a></p>
+<ul>
+<li>Rework of the column data type classes, as well as a workaround for an Oracle JDBC driver bug with reporting data type information.</li>
+</ul>
+<h2>Release 10.2 - 2013-05-21</h2>
+<p><a name="a10.2"></a></p>
+<ul>
+<li>New option to set output encoding format. The option is &ldquo;schemacrawler.encoding.output&rdquo; in the SchemaCrawler properties file. Default input and output encoding has been changed to UTF-8.</li>
+<li>Support for showing trigger information in Sqlite.</li>
+</ul>
+<h2>Release 10.1 - 2013-04-21</h2>
+<p><a name="a10.1"></a></p>
+<ul>
+<li>SchemaCrawler support for J2SE 7 only, since previous Java versions are deprecated. Converted the codebase over to use J2SE 7 constructs.</li>
+<li>New command-line option, -only-matching, to show only matching tables, and does not show foreign keys that reference other non-matching tables. Modeled after the analogous grep option.</li>
+<li>New option to set input encoding format for script files and templates. The option is &ldquo;schemacrawler.encoding.input&rdquo; in the SchemaCrawler properties file.</li>
+<li>Renamed command-line option -table_types to -tabletypes.</li>
+</ul>
+<h2>Release 9.6 - 2013-03-08</h2>
+<p><a name="a9.6"></a></p>
+<ul>
+<li>Fixed diagram generation on Linux when no GraphViz options are supplied.</li>
+<li>Added trigger names to JSON output by default. Added new configuration variable, schemacrawler.format.hide_trigger_names to suppress trigger names in all output formats.</li>
+<li>Added new -portablenames command-line option, to allow for easy comparison between databases, by hiding foreign key names, constraint names, trigger names, index and primary key names, and not showing the fully-qualified table name.</li>
+</ul>
+<h2>Release 9.5 - 2013-02-24</h2>
+<p><a name="a9.5"></a></p>
+<ul>
+<li>Updated HTML generation to have captions consistently for all tables. Numeric data is right-aligned in HTML, and correctly reported in JSON as well. These changes affect other output formats as well.</li>
+<li>Updated Oracle database connection URL to the new syntax.</li>
+</ul>
+<h2>Release 9.4 - 2013-02-02</h2>
+<p><a name="a9.4"></a></p>
+<ul>
+<li>Fix for honoring text formatting options in GraphViz dot output.</li>
+</ul>
+<h2>Release 9.3.2 - 2012-11-17</h2>
+<p><a name="a9.3.2"></a></p>
+<ul>
+<li>Fix for honoring sort options on JSON output.</li>
+</ul>
+<h2>Release 9.3.1 - 2012-11-3</h2>
+<p><a name="a9.3.1"></a></p>
+<ul>
+<li>Fix for generating diagrams on Unix.</li>
+</ul>
+<h2>Release 9.3 - 2012-10-31</h2>
+<p><a name="a9.3"></a></p>
+<ul>
+<li>Weak associations are returned sorted.</li>
+<li>Added ability to specify additional command-line options for GraphViz, using either Java system properties, or environmental variables.</li>
+</ul>
+<h2>Release 9.2 - 2012-10-21</h2>
+<p><a name="a9.2"></a></p>
+<ul>
+<li>Fixed Windows script, schemacrawler.cmd.</li>
+<li>Better support for sqlite, including the latest database driver, reporting of foreign keys, and view definitions.</li>
+<li>Updated the jTDS JDBC driver to 1.2.6, for Microsoft SQL Server.</li>
+<li>Deprecated the getType() method on database objects.</li>
+</ul>
+<h2>Release 9.1 - 2012-09-30</h2>
+<p><a name="a9.1"></a></p>
+<ul>
+<li>Added examples for Groovy, Ruby and Python scripting.</li>
+<li>SchemaCrawler is now bundled as an OSGi jar.</li>
+</ul>
+<h2>Release 9.0 - 2012-09-08</h2>
+<p><a name="a9.0"></a></p>
+<ul>
+<li>The API has changed from 8.x versions. All API calls return collections instead of arrays. Schemas are not containers, but tags for database objects. Tables and routines (stored procedures and functions) are available directly on the database, and there are new finders to search by schema.</li>
+<li>Support for database functions has been added. All references to stored procedures in the code and documentation now refer to routines. Stored procedures and functions are treated in the same way, as routines.</li>
+<li>SchemaCrawler now allows queries to be specified on the command-line. If a command is not recognized, or is not a named query, it is executed as if it is a query.</li>
+<li>The output format includes trigger definitions as part of the schema, instead of as the detailed schema output.</li>
+<li>Database connections have to be specified on the command-line, by providing the driver class name and URL. Database connections can no longer be defined in properties files.</li>
+<li>There are new command-line options. -V, &ndash;version will print the SchemaCrawler version and exit. There are shorter and more standard (Unix-like) synonyms -u (for -user), -c (for -command), and -o (for -output). The -procedures switch has been renamed -routines.</li>
+</ul>
+<h2>Release 8.17 - 2012-07-12</h2>
+<p><a name="a8.17"></a></p>
+<ul>
+<li>The HTML output format outputs valid HTML5 and CSS3, as valid XML.</li>
+<li>JSON output supports all of the formatting options that the other text formats support.</li>
+<li>A new method, getShortName(), get the unqualified name for columns and other dependent objects.</li>
+<li>A new text format option, &ldquo;schemacrawler.format.show_unqualified_names&rdquo;, shows the unqualified name in text output, for easier comparisons across different catalogs and schemas.</li>
+</ul>
+<h2>Release 8.16 - 2012-06-20</h2>
+<p><a name="a8.16"></a></p>
+<ul>
+<li>Added support for synonyms. Synonyms are shown in SchemaCrawler output for IBM DB2, Oracle, and Microsoft SQL Server, as well as available for extension in other databases.</li>
+</ul>
+<h2>Release 8.15 - 2012-05-05</h2>
+<p><a name="a8.15"></a></p>
+<ul>
+<li>Added distribution for Sybase IQ.</li>
+</ul>
+<h2>Release 8.14 - 2012-04-08</h2>
+<p><a name="a8.14"></a></p>
+<ul>
+<li>Added new command-line switch to show parent and child tables, in addition to those selected by grep.</li>
+</ul>
+<h2>Release 8.12 - 2012-02-25</h2>
+<p><a name="a8.12"></a></p>
+<ul>
+<li>Added ability to stream SchemaCrawler output.</li>
+</ul>
+<h2>Release 8.11 - 2012-02-18</h2>
+<p><a name="a8.11"></a></p>
+<ul>
+<li>Added ability to configure SchemaCrawler linters.</li>
+<li>Added a new lint for useless surrogate keys.</li>
+<li>Added ability to tag tables and columns with additional metadata attributes from SQL queries.</li>
+</ul>
+<h2>Release 8.10 - 2011-12-08</h2>
+<p><a name="a8.10"></a></p>
+<ul>
+<li>Added SchemaCrawler Lint as a separate report, with ability to add custom linters.</li>
+<li>Added additional SchemaCrawler linters.</li>
+<li>Added ability to extend SchemaCrawler with custom command.</li>
+<li>Fixed issue with constraints with the same name in different schemas.</li>
+</ul>
+<h2>Release 8.9 - 2011-12-08</h2>
+<p><a name="a8.9"></a></p>
+<ul>
+<li>Added SchemaCrawler Lint as a separate report, with ability to add custom linters.</li>
+<li>Added additional SchemaCrawler linters.</li>
+<li>Added ability to extend SchemaCrawler with custom command.</li>
+<li>Fixed issue with constraints with the same name in different schemas.</li>
+</ul>
+<h2>Release 8.8 - 2011-11-05</h2>
+<p><a name="a8.8"></a></p>
+<ul>
+<li>Added JSON and TSV output formats.</li>
+<li>Moved SchemaCrawler Maven Plugin into a new SourceForge project.</li>
+</ul>
+<h2>Release 8.7 - 2011-09-05</h2>
+<p><a name="a8.7"></a></p>
+<ul>
+<li>New INFORMATION_SCHEMA views to provide Oracle metadata details.</li>
+<li>Update database driver versions.</li>
+<li>Fixed bug #3392557 - NullPointer exception thrown when columns excluded in Oracle.</li>
+<li>Fixed bug #3392976 - Exception retrieving tables: Could not retrieve indexes for Oracle schemas with $ in the name.</li>
+<li>Fixed bug #3401752 - Attempt to locate database &lsquo;dbo&rsquo; by name failed.</li>
+</ul>
+<h2>Release 8.6 - 2011-05-08</h2>
+<p><a name="a8.6"></a></p>
+<ul>
+<li>New feature to chain, or run multiple SchemaCrawler commands using JavaScript.</li>
+</ul>
+<h2>Release 8.5.1 - 2011-01-28</h2>
+<p><a name="a8.5.1"></a></p>
+<ul>
+<li>Re-organized command-line code, including grep command-line.</li>
+</ul>
+<h2>Release 8.5 - 2011-01-28</h2>
+<p><a name="a8.5"></a></p>
+<ul>
+<li>Changed copyright to 2011.</li>
+<li>Fixed grep.</li>
+<li>Removed option to provide index info SQL.</li>
+<li>Better unit test coverage. Restructuring of Eclipse projects.</li>
+</ul>
+<h2>Release 8.4 - 2010-12-23</h2>
+<p><a name="a8.4"></a></p>
+<ul>
+<li>Simplified commands - list_objects is now simply list. Removed the -show_stored_procedures command-line option - simply use -proedures=</li>
+<li>Fixed issue with obtaining PostgreSQL tables.</li>
+<li>Fixed issue with obtaining Derby foreign keys.</li>
+<li>Made -infolevel a required command-line argument.</li>
+<li>Use Maven 3.0 in the build.</li>
+</ul>
+<h2>Release 8.3.3 - 2010-08-01</h2>
+<p><a name="a8.3.3"></a></p>
+<ul>
+<li>Added color to headings in HTML output.</li>
+<li>Fixed bug when remarks header was not shown if the table did not have remarks, but columns did.</li>
+<li>DB2 INFORMATION_SCHCEMA SQL fixed.</li>
+<li>Foreign keys show full column names in graphs, even when the table is excluded.</li>
+</ul>
+<h2>Release 8.3.2 - 2010-08-01</h2>
+<p><a name="a8.3.2"></a></p>
+<ul>
+<li>Column remarks are printed along with table remarks.</li>
+<li>Foreign keys show full column names in graphs, even when the table is excluded.</li>
+</ul>
+<h2>Release 8.3.1 - 2010-07-18</h2>
+<p><a name="a8.3.1"></a></p>
+<ul>
+<li>Added new command-line option, -urlx, to pass JDBC URL properties to bundled distributions.</li>
+<li>Added details on the &ldquo;main&rdquo; command-line in the how-to section of the website.</li>
+</ul>
+<h2>Release 8.3 - 2010-07-15</h2>
+<p><a name="a8.3"></a></p>
+<ul>
+<li>Added new bundled distribution for IBM DB2.</li>
+<li>Added new bundled distribution for HyperSQL 2.0.0.</li>
+<li>Added support for spaces in schema and catalog names.</li>
+<li>Changed the test database to HyperSQL 2.0.0. Changed the test data, and added more robust unit tests.</li>
+</ul>
+<h2>Release 8.2 - 2010-05-25</h2>
+<p><a name="a8.2"></a></p>
+<ul>
+<li>Added support for spaces or reserved words in table, procedure, and column names.</li>
+<li>Added new database lint to find column and table names with spaces or reserved words in them.</li>
+<li>Added SchemaCrawler to the Sonatype Maven public repository. Added new Maven projects examples.</li>
+<li>Table and procedure remarks are output with verbose output.</li>
+<li>The Maven plug-in generates a database report that uses the same stylesheet as the rest of the Maven generated website.</li>
+<li>Generated database diagrams are less &ldquo;colorful&rdquo;.</li>
+</ul>
+<h2>Release 8.1 - 2010-02-28</h2>
+<p><a name="a8.1"></a></p>
+<ul>
+<li>Added SchemaCrawler lint, to highlight potential normalization issues, such as incrementing column names, and other issues. A new -infolevel value, lint, was added.</li>
+<li>Weak associations are now available only with SchemaCrawler lint.</li>
+</ul>
+<h2>Release 8.0 - 2010-02-03</h2>
+<p><a name="a8.0"></a></p>
+<ul>
+<li>Added the -infolevel command-line switch to control the amount of database metadata retrieved by SchemaCrawler.</li>
+<li>Create a command registry, which allows pluggable commands. Any command can be run from the main class.</li>
+<li>Dropped the -catalogs command-line switch filtering catalogs. Dropped the concept of a catalog from the API. Databases now directly contain schemas.</li>
+</ul>
+<h2>Release 7.6 - 2009-12-03</h2>
+<p><a name="a7.6"></a></p>
+<ul>
+<li>Fixed specification of Oracle SID using the -database command-line switch, as well as specification of port number.</li>
+<li>Fixed shell script classpath.</li>
+</ul>
+<h2>Release 7.5.1 - 2009-11-28</h2>
+<p><a name="a7.5.1"></a></p>
+<ul>
+<li>Added methods to get imported and exported foreign keys and weak associations.</li>
+</ul>
+<h2>Release 7.5 - 2009-11-25</h2>
+<p><a name="a7.5"></a></p>
+<ul>
+<li>Added a SchemaCrawlerInfo object to the database metadata, to provide the SchemaCrawler version number, and Java system properties.</li>
+<li>Updates to all bundled database drivers.</li>
+<li>Bug-fix for obtaining MySQL foreign keys.</li>
+<li>Added ability to script the database, using JavaScript. A live connection is provided to the JavaScript context for this purpose.</li>
+<li>Removed command-line switch, -schemapattern, and the schemapattern option. Use the -schemas command-line switch instead.</li>
+<li>Added sections to SchemaCrawler output, to make it more readable.</li>
+<li>Tables sort is done using graph algorithms, and includes cycle checks.</li>
+</ul>
+<h2>Release 7.4 - 2009-09-24</h2>
+<p><a name="a7.4"></a></p>
+<ul>
+<li>Added new pre-packaged SchemaCrawler for Oracle.</li>
+<li>Fixed issue with index sort order of primary key columns.</li>
+<li>Updated website with new front page.</li>
+</ul>
+<h2>Release 7.3.1 - 2009-09-24</h2>
+<p><a name="a7.3.1"></a></p>
+<ul>
+<li>Enhancement to the JavaSqlType class, to contain the SQL type group. New lookup by data-type name added to JavaSqlTypesUtility.</li>
+<li>Removed method, getTypeClass(), from ColumnDataType.</li>
+<li>Removed deprecated methods for grouping SQL data types (such as isReal()) from the ColumnDataType class.</li>
+</ul>
+<h2>Release 7.3 - 2009-09-19</h2>
+<p><a name="a7.3"></a></p>
+<ul>
+<li>Added support for mapping of SQL data type to Java classes. This includes the new JavaSqlType class, and the JavaSqlTypesUtility. A new method, getTypeClass(), has been added to ColumnDataType.</li>
+<li>Added SchemaCrawler for Apache Derby, that is packaged for Apache Derby.</li>
+</ul>
+<h2>Release 7.2 - 2009-08-21</h2>
+<p><a name="a7.2"></a></p>
+<ul>
+<li>Better modeling of privileges and grants.</li>
+<li>Bug fix for obtaining indexes and foreign keys with the Oracle driver.</li>
+<li>Added natural sort order for tables, based on the foreign keys, and corresponding new configuration option, and command-line switch, -sorttables. Also added new API methods to get child and parent tables, based on the foreign keys.</li>
+<li>Handle null schemas for databases that do not support schemas, such as MySQL.</li>
+<li>Allow data dumps when tables contain binary objects, by fixing the SELECT sort order.</li>
+</ul>
+<h2>Release 7.1 - 2009-08-12</h2>
+<p><a name="a7.1"></a></p>
+<ul>
+<li>Better log messages, including for database connections, and inclusion of table and columns in the output.</li>
+<li>More efficient use of database connections, including a change to the Executable.execute method to take a database connection, rather than a data-source.</li>
+<li>Ensure that the pooled connection is closed, rather than the original database connection. This allows SchemaCrawler to play well with pooled connections.</li>
+</ul>
+<h2>Release 7.0 - 2009-07-10</h2>
+<p><a name="a7.0"></a></p>
+<ul>
+<li>Major restructuring of the API, with the introduction of a Database object that contains all of the database metadata, and containing catalog and schema objects.</li>
+<li>To allow for more control on table selection, the -tables command-line parameter matches to the fully qualified table name, CATALOG.SCHEMA.TABLENAME. Similarly for the -routines command-line parameter.</li>
+</ul>
+<h2>Release 6.4 - 2009-05-10</h2>
+<p><a name="a6.4"></a></p>
+<ul>
+<li>New pre-packaged distribution, SchemaCrawler for SQLite.</li>
+<li>Enhanced algorithm for finding weak associations.</li>
+</ul>
+<h2>Release 6.3 - 2009-05-08</h2>
+<p><a name="a6.3"></a></p>
+<ul>
+<li>If no commands are specified, defaults to standard_schema, which provides the most commonly needed details of the schema.</li>
+<li>SchemaCrawler Grep functionality is built into the SchemaCrawler options, and the SchemaCrawler command-line. This means that all of the SchemaCrawler commands, including graphing, will use filtering and grep options.</li>
+<li>SchemaCrawler command-line option help has been re-written. New command-line options are available.</li>
+<li>SchemaCrawler can produce Graphviz DOT files to generate schema diagrams.</li>
+</ul>
+<h2>Release 6.2 - 2009-04-08</h2>
+<p><a name="a6.2"></a></p>
+<ul>
+<li>A new feature to infer weak associations between tables, even if there is no foreign key. Ruby on Rails table schemes are supported, as well as other simple relationships. Table name prefixes are automatically detected.</li>
+<li>Database diagram support using Graphviz. Primary keys are indicated in a darker color than other columns. Foreign keys are indicated with arrow connectors. Weak associations between tables are shown in dashed lines. Multiple output formats are supported. Support for Jung is dropped.</li>
+</ul>
+<h2>Release 6.1 - 2009-03-29</h2>
+<p><a name="a6.1"></a></p>
+<ul>
+<li>Better reporting of ascending and descending index columns. This is an API change.</li>
+<li>Better grep options, to allow searching through both tables and stored procedures.</li>
+<li>Grep options default to excluding stored procedures.</li>
+<li>Minor bug fixes for Sybase, including generating warnings when obtaining table column privileges, instead of failing.</li>
+<li>New Windows script file for locating Java, and launching SchemaCrawler.</li>
+<li>Reorganization of distribution, so that only a single SchemaCrawler jar file is distributed in all distributions. License distribution is also reorganized.</li>
+</ul>
+<h2>Release 6.0.2 - 2008-11-30</h2>
+<p><a name="a6.0.2"></a></p>
+<ul>
+<li>Minor bug fixes for MySQL, where the schema name was being reported as null, causing an exception.</li>
+</ul>
+<h2>Release 6.0.1 - 2008-10-30</h2>
+<p><a name="a6.0.1"></a></p>
+<ul>
+<li>Minor bug fixes for Oracle, where the data-type was a short instead of an integer.</li>
+</ul>
+<h2>Release 6.0 - 2008-10-16</h2>
+<p><a name="a6.0"></a></p>
+<ul>
+<li>Changed the API so that there is a separation of concerns - the SchemaInfoLevel should be an option, not a CrawlHandler property.</li>
+<li>Changed the API so the top level object is a catalog, which contains schemas. This means that there is full support for multiple schemas.</li>
+<li>Added support for JavaScript scripting.</li>
+</ul>
+<h2>Release 5.5 - 2008-02-28</h2>
+<p><a name="a5.5"></a></p>
+<ul>
+<li>Fixed bug that always reported an index as unique.</li>
+<li>Fixed bug with primary key columns.</li>
+<li>SchemaCrawler for Microsoft SQL Server to show procedures and triggers.</li>
+<li>SchemaCrawler distribution for any database.</li>
+</ul>
+<h2>Release 5.4 - 2007-12-15</h2>
+<p><a name="a5.4"></a></p>
+<ul>
+<li>Added new command-line switch, -schemapattern, for specifying schema patterns when a connection is specified from the command-line.</li>
+<li>Added object attributes automatically, from unused columns in the metadata calls. Nothing goes to waste.</li>
+<li>Added JDBC driver metadata, including driver properties, and separated those from the database system metadata.</li>
+</ul>
+<h2>Release 5.3 - 2007-11-15</h2>
+<p><a name="a5.3"></a></p>
+<ul>
+<li>Made sure that all relevant license files are getting delivered.</li>
+<li>Fixed bug in accessing foreign key update and delete rules on Oracle.</li>
+<li>Fixed equals comparison on all schema objects, and added a unit test for equals.</li>
+<li>Added an easier way to access foreign keys from the foreign key column itself Use isPartOfForeignKey(), and getReferencedColumn() on the Column class.</li>
+<li>Externalized the wrapper for java.sql.Types into a new public class, schemacrawler.schema.SqlDataType.</li>
+<li>Added the ability to get result-set metadata.</li>
+<li>Changed schema info level from an enum into a class that can be used to specify details on what aspects of the schema need to be retrieved.</li>
+</ul>
+<h2>Release 5.2 - 2007-10-30</h2>
+<p><a name="a5.2"></a></p>
+<ul>
+<li>A significant re-write of the internal command processing code.</li>
+<li>Spring framework support for all of SchemaCrawler functionality, including integrations and grep.</li>
+<li>New example for grep.</li>
+<li>New example for using the Spring framework with SchemaCrawler.</li>
+<li>Pre-packaged releases do not load config file, even if available.</li>
+<li>Fixed Unix shell script for PostgreSQL.</li>
+</ul>
+<h2>Release 5.1 - 2007-08-05</h2>
+<p><a name="a5.1"></a></p>
+<ul>
+<li>Simplified examples.</li>
+<li>Executable for SchemaCrawler for Microsoft SQL Server and MySQL.</li>
+<li>Commonly available SchemaCrawler command-line argument for setting the log level.</li>
+</ul>
+<h2>Release 5.0 - 2007-06-25</h2>
+<p><a name="a5.0"></a></p>
+<ul>
+<li>API changed to use Java 5 constructs. Tested with Java 6. API is no longer Java 1.4 compatible.</li>
+<li>Started SchemaCrawler Grep for MS SQL Server.</li>
+<li>Fixed java.lang.AbstractMethodError with Java 6.</li>
+</ul>
+<h2>Release 4.2 - 2007-01-07</h2>
+<p><a name="a4.2"></a></p>
+<ul>
+<li>Fixed null pointer exception with DB2.</li>
+<li>Fixed error message on a bad command-line. Added a general -help option.</li>
+<li>Added new schema grep functionality, that can search for tables and columns usng regular expressions.</li>
+<li>Added new example for setting options programatically.</li>
+<li>Added documentation for providing database connection options directly on the command-line.</li>
+<li>Updated ant task to optionally take database connection options as arguments, instead of from the configuration file.</li>
+</ul>
+<h2>Release 4.1 - 2006-12-07</h2>
+<p><a name="a4.1"></a></p>
+<ul>
+<li>Fixed bug [ 1610140 ] Sorting doesn&rsquo;t work.</li>
+<li>Fixed output of standard data types. Also changed the configuration option name.</li>
+<li>Fixed column output for tables and procedures that contain an underscore in their name. JDBC matches the underscore to a wildcard character.</li>
+</ul>
+<h2>Release 4.0 - 2006-12-03</h2>
+<p><a name="a4.0"></a></p>
+<ul>
+<li>Added support for SQL standard INFORMATION_SCHEMA views. If equivalent SQL for the standard INFORMATION_SCHEMA view is specified, it is used to provide additional schema information such as check constraints, triggers, and view and procedure definitions.</li>
+<li>Added support for get index information views. This SQL will be used in preference to the getIndexInfo JDBC method to allow for databases and drivers that do not support getIndexInfo due to permissioning issues.</li>
+<li>Better output format for HTML and text.</li>
+<li>Better handling of output file resources.</li>
+<li>Better handling of database connection resources.</li>
+<li>More information on the website, and better website usability.</li>
+</ul>
+<h2>Release 3.8 - 2006-09-26</h2>
+<p><a name="a3.8"></a></p>
+<ul>
+<li>Added Maven 2.0 plugin for generation of schema reports</li>
+<li>Added command-line option to provide database connection information</li>
+<li>Worked around a bug in the Oracle driver as described in <a href="http://issues.apache.org/jira/browse/DDLUTILS-29?page=all">http://issues.apache.org/jira/browse/DDLUTILS-29?page=all</a></li>
+</ul>
+<h2>Release 3.7 - 2006-06-12</h2>
+<p><a name="a3.7"></a></p>
+<ul>
+<li>Added retrieval of database properties</li>
+<li>Added retrieval of column data types, both system datatypes and UDTs</li>
+<li>Added unit tests to ensure that the XHTML output is valid XML</li>
+<li>Fixed bug with merge rows option</li>
+<li>Fixed bug with appending output when multiple runs of SchemaCrawler append to the same output file</li>
+<li>Fixed SQLException with Oracle Database 10g Express Edition driver on outputting views</li>
+<li>Added XStream integration for XML serialization and deserialization</li>
+<li>Added new command, verbose_schema, that can give all possible details of the schema</li>
+<li>Obtain database system properties when the maximum schema command is used</li>
+<li>Added integrations with FreeMarker for templated output</li>
+<li>Removed Betwixt integration, since the required functionality is provided by XStream</li>
+</ul>
+<h2>Release 3.6 - 2006-03-28</h2>
+<p><a name="a3.6"></a></p>
+<ul>
+<li>Added integrations with Velocity for templated output, and with JUNG for JPEG graph generation</li>
+<li>Added new examples to demonstrate Velocity templating, and JUNG graphs</li>
+<li>New command-line option to specify the output file name</li>
+</ul>
+<h2>Release 3.5 - 2006-03-06</h2>
+<p><a name="a3.5"></a></p>
+<ul>
+<li>Added ability to retrieve column and table privileges</li>
+<li>Added Betwixt mappings for XML serialization and de-serialization</li>
+<li>Added Unix shell scripts for examples</li>
+<li>Fixed bug with the ordering of primary key and index columns</li>
+<li>Changed API - ColumnInfoLevel is called SchemaInfoLevel</li>
+<li>Moved source repository to Subversion</li>
+</ul>
+<h2>Release 3.4 - 2006-01-16</h2>
+<p><a name="a3.4"></a></p>
+<ul>
+<li>Correction of spelling of the &ldquo;sort_alphabetically&rdquo; option names</li>
+<li>Refactoring of inheritance hierarchy of database objects, resulting in fewer equals, hashCode and compareTo implementations</li>
+<li>Better HTML formatting for counts</li>
+<li>Dirty reads are performed for counts and other operations</li>
+<li>Sets the default value for table columns</li>
+<li>Javadoc clean-up</li>
+<li>Findbugs, checkstyle, and PMD code smells clean-up</li>
+</ul>
+<h2>Release 3.3 - 2005-11-03</h2>
+<p><a name="a3.3"></a></p>
+<ul>
+<li>The ability to include as well as exclude tables using regular expressions.</li>
+<li>The ability to include as well as exclude columns using regular expressions.</li>
+<li>A new substitution variable, ${columns}, for use in database queries that iterate over tables.</li>
+<li>New examples for executing database-specific and user-defined queries have been added.</li>
+<li>Better output formatting for HTML dumps, and counts in text format.</li>
+<li>New website.</li>
+<li>Worked around an issue with the Sybase driver, that provides primary keys in a different order than most other drivers.</li>
+<li>Improved logging, and made the log level in the configuration really work.</li>
+</ul>
+
+<!-- PAGE CONTENT -- END -->
+
+          </div>
+       </main>
+       <footer class="footer">
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22913512-2"></script>
+          <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'UA-22913512-2');
+          </script>
+          <script>
+            $("table").addClass("table-sm");
+            $("table").addClass("table-bordered");
+            $("table").addClass("table-responsive");
+            $("thead").addClass("thead-dark");						
+          </script>
+
+          <!-- Footer with copyright -->
+          <div class="container-fluid">
+            <hr/>
+
+             <div class="alert alert-info" role="alert">
+               <a href="http://www.schemacrawler.com/">SchemaCrawler</a> is free and open-source software.       
+               <strong><a href="https://www.paypal.me/sualeh">Donations are appreciated.</a></strong>
+            </div>
+            <div id="footer" xmlns:dc="http://purl.org/dc/elements/1.1/"  class="small">
+              <p id="copyright" property="dc:rights">
+                <span>SchemaCrawler, version 14.21.02</span><br />
+                &copy;
+                <span property="dc:dateCopyrighted">2000-2018</span>
+                <span property="dc:creator">Sualeh Fatehi &lt;sualeh@hotmail.com&gt;.</span>
+              </p>
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </div>
+          </div>
+      </footer>
+   </body>
+</html>

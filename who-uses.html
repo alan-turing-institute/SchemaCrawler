@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en-US">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="copyright" content="&copy; 2000-2018 Sualeh Fatehi." />
+      <!-- Begin SEO -->
+      <title>SchemaCrawler - Free database schema discovery and comprehension tool</title>
+      <meta property="og:title" content="SchemaCrawler" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="description" content="Free database schema discovery and comprehension tool" />
+      <meta property="og:description" content="Free database schema discovery and comprehension tool" />
+      <link rel="canonical" href="https://sualeh.github.io/SchemaCrawler/" />
+      <meta property="og:url" content="https://www.SchemaCrawler.com" />
+      <meta property="og:site_name" content="SchemaCrawler" />
+      <script type="application/ld+json">
+         {
+         "name":"SchemaCrawler",
+         "description":"Free database schema discovery and comprehension tool","
+         author":"Sualeh Fatehi",
+         "@type":"WebSite",
+         "url":"https://www.SchemaCrawler.com",
+         "logo":"https://sualeh.github.io/SchemaCrawler/images/schemacrawler_logo.svg",
+         "headline":"SchemaCrawler",
+         "sameAs": [
+             "https://www.facebook.com/schemacrawler/",
+             "https://www.linkedin.com/company/2826059/"
+         ],
+         "@context":"http://schema.org"
+         }
+      </script>
+      <!-- End SEO -->
+      <!-- Bootstrap 4.0 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+         crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+         crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+         crossorigin="anonymous"></script>
+      <!-- Lightbox -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+      <!--  SchemaCrawler styles -->
+      <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+     <header class="header clearfix">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+           <!-- Links -->
+           <ul class="navbar-nav">
+              <li class="nav-item">
+                 <a class="nav-link" href="consulting.html">Consulting</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-1" data-toggle="dropdown">
+                 SchemaCrawler
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">About SchemaCrawler</a>
+                    <a class="dropdown-item" href="readme.html">Readme</a>
+                    <a class="dropdown-item" href="who-uses.html">Who Uses</a>
+                    <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
+                    <a class="dropdown-item" href="database-support.html">Database System Support</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+                    <a class="dropdown-item" href="changes-report.html">Change History</a>
+                    <a class="dropdown-item" href="license.html">License</a>
+                    <a class="dropdown-item" href="building.html">Building From Source Code</a>
+                    <a class="dropdown-item" href="consulting.html">Support and Consulting</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-2" data-toggle="dropdown">
+                 Features
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="output.html">Text Output</a>
+                    <a class="dropdown-item" href="diff.html">Diff</a>
+                    <a class="dropdown-item" href="schemacrawler_grep.html">Grep</a>
+                    <a class="dropdown-item" href="diagramming.html">Diagramming</a>
+                    <a class="dropdown-item" href="scripting.html">Scripting</a>
+                    <a class="dropdown-item" href="lint.html">Lint</a>
+                    <a class="dropdown-item" href="weak-associations.html">Weak Associations</a>
+                    <a class="dropdown-item" href="offline.html">Offline Snapshots</a>
+                    <a class="dropdown-item" href="plugins.html">Plugins</a>
+                    <a class="dropdown-item" href="data-dictionary-extensions.html">Extensions Using the Data Dictionary</a>
+                    <a class="dropdown-item" href="report-maven-plugin.html">SchemaCrawler Report Maven Plugin</a>
+                    <a class="dropdown-item" href="webapp.html">SchemaCrawler Web Application</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-3" data-toggle="dropdown">
+                 Resources
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="readme.html">Getting Started</a>
+                    <a class="dropdown-item" href="resources.html">Resources</a>
+                    <a class="dropdown-item" href="code-examples.html">Code Examples</a>
+                    <a class="dropdown-item" href="faq.html">FAQS</a>
+                    <a class="dropdown-item" href="how-to.html">How-tos</a>
+                    <a class="dropdown-item" href="consulting.html">Get Help</a>
+                    <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler">Project Page on GitHub</a>
+                 </div>
+              </li>
+           </ul>
+        </nav>
+
+        <div id="banner" class="jumbotron jumbotron-fluid bg-light">
+          <div class="container-fluid">
+            <img class="img-fluid" style="display: block; float: left; width: 8.0rem;" src="images/schemacrawler_logo.svg" alt="Schemacrawler logo" />
+            <h1>SchemaCrawler</h1>
+            <p class="lead">Free database schema discovery and comprehension tool</p>
+          </div>
+        </div>
+
+     </header>
+
+     <main>
+        <div id="page-content" class="container-fluid">
+
+<!-- PAGE CONTENT -- START -->
+
+<h1>Who Uses SchemaCrawler</h1>
+<h2>Ecosystem</h2>
+<p>See details on the <a href="ecosystem.html">SchemaCrawler Ecosystem</a>.</p>
+<h2>Question from Users</h2>
+<p>SchemaCrawler questions from users.</p>
+<ul>
+<li>How <a href="http://stackoverflow.com/search?q=schemacrawler">programmers</a> use SchemaCrawler.</li>
+<li>How <a href="http://dba.stackexchange.com/search?q=schemacrawler">database administrators</a> use SchemaCrawler.</li>
+<li>How <a href="http://serverfault.com/search?q=schemacrawler">system administrators</a> use SchemaCrawler.</li>
+<li>How <a href="http://sqa.stackexchange.com/search?q=schemacrawler">software testers</a> use SchemaCrawler.</li>
+</ul>
+<h2>Companies</h2>
+<ul>
+<li><a href="https://github.com/goldmansachs/obevo">Goldman Sachs Obevo</a> project, a database deployment tool that handles enterprise-scale schemas</li>
+<li><a href="https://developer.atlassian.com/display/JIRADEV/Database+Schema">Atlassian JIRA database schema</a></li>
+<li><a href="https://btc-ag.github.io/redg/">RedG test data generation library</a></li>
+<li>Architect at Nestlé Nespresso SA: &ldquo;I run a daily cron to export the content (metadata and data) of a schema, and I compare it to another reference schema to check which changes have been made to the data. The schema contains configuration values for our system (domains, ports, datasources, database connection strings, usernames&hellip;) and it&rsquo;s paramount to allow all architects to change those data without losing control of what is being done. SchemaCrawler is the only tool that I found that could export both metadata and data in a predictable way, so that I can compare (diff) 2 schemas without getting false alerts.&rdquo;</li>
+<li>
+<p>SchemaCrawler database diagrams in use at the Scrum meeting at the Software Development Departement of <a href="http://www.noumea.nc/">La Ville de Noumea.</a> Photograph courtesy of <a href="https://www.linkedin.com/in/adrien-sales">Adrien Sales</a>.</p>
+</li>
+</ul>
+<p><a href="images/SchemaCrawler_Noumea.jpg" data-lightbox="sc-in-use" data-title="Schemacrawler database diagrams in use"> <img class="img-fluid img-thumbnail" style="width: 200px" src="images/SchemaCrawler_Noumea.jpg" alt="Schemacrawler database diagrams in use" /> </a></p>
+<ul>
+<li><a href="https://github.com/search?q=schemacrawler+-user%3Asualeh&amp;type=Code">A large number of projects on GitHub</a></li>
+<li><a href="https://www.linkedin.com/search/results/people/?keywords=%22schemacrawler%22">SchemaCrawler experts on LinkedIn</a></li>
+</ul>
+<h2>Tweeted testimonials</h2>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">TIL about a project called SchemaCrawler that generates graphviz charts of a db schema by introspecting on foreign keys. 💯 would recommend</p>&mdash; virtual dom pérignon 🧙‍♂️ (@jacobrothstein) <a href="https://twitter.com/jacobrothstein/status/912806745663139840?ref_src=twsrc%5Etfw">September 26, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">use <a href="http://t.co/JFm542dT">http://t.co/JFm542dT</a> for easy working with database metadata &amp; generation of your own code artifacts</p>&mdash; Marek Tomáš (@marektomas) <a href="https://twitter.com/marektomas/status/240462380365119489?ref_src=twsrc%5Etfw">August 28, 2012</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thanks SchemaCrawler! (database schema discovery and comprehension, and schema documentation tool) <a href="http://t.co/8lV6pIB2">http://t.co/8lV6pIB2</a></p>&mdash; Claudio Bastos Iorio (@selecters75) <a href="https://twitter.com/selecters75/status/218357126823817218?ref_src=twsrc%5Etfw">June 28, 2012</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">SchemaCrawler (http://schemacrawler.sourceforge.net/) is awesome for working with a db&#39;s metadata</p>&mdash; Stig KleppeJørgensen (@stigkj) <a href="https://twitter.com/stigkj/status/70973992479109121?ref_src=twsrc%5Etfw">May 18, 2011</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">SchemaCrawler is an excelent tool to explore a database schema. It&#39;s a layer on top of JDBC: http://bit.ly/aVqIVZ. Give it a try.</p>&mdash; William Chinelato (@willchinelato) <a href="https://twitter.com/willchinelato/status/12117092941?ref_src=twsrc%5Etfw">April 13, 2010</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h2>Press</h2>
+<p>SchemaCrawler in the press, and in online articles and blogs.</p>
+<ul>
+<li>Buffer of My Mind on <a href="http://mindbuffer.wordpress.com/2010/10/14/schema-crawler/"> SchemaCrawler </a></li>
+<li>Maxime Werlen&rsquo;s blog post on <a href="http://maxime.werlen.fr/blog/archives/2011/04/22/schemacrawler-pour-extraire-la-structure-d-une-base-de-donn-e.html">Analyse BDD avec SchemaCrawler</a></li>
+<li>Kelvin Meeks&rsquo; post on <a href="http://intltechventures.blogspot.com/2012/08/2012-08-22-wednesday-data-governance.html">Data Governance Tools.</a></li>
+<li>Gilesey&rsquo;s post on <a href="https://gilesey.wordpress.com/2012/11/15/a-lightweight-schema-diff-or-dump-from-oracle/">A lightweight schema diff or dump from Oracle</a></li>
+<li>Pierluigi Vernetto&rsquo;s post <a href="http://www.javamonamour.org/2013/06/schemacrawler-for-oracle-db-diff.html">SchemaCrawler for Oracle DB Diff</a></li>
+<li>Mike Zhukovskiy&rsquo;s exploration of ERD tools, <a href="http://rubyrailsmz.blogspot.com/2014/08/blog-post.html">Twitter ERD</a></li>
+<li>Thom Snoeren&rsquo;s blog post, <a href="http://tsn-admin.blogspot.com/2014/12/schemacrawler-1-notes-lint-by-sualeh.html">SchemaCrawler 1: Notes &amp; Lint</a></li>
+<li>Thom Snoeren&rsquo;s blog post, <a href="http://tsn-admin.blogspot.com/2015/02/schemacrawler-2-database-metadata.html">SchemaCrawler 2: Database Metadata Discovery</a></li>
+<li>Stefan Pröll&rsquo;s blog post, <a href="http://blog.stefanproell.at/2016/01/11/create-an-er-diagram-of-an-existing-sqlite-database-or-manyoother-rdbms/">Create an ER Diagram of an Existing SQLite Database (or many other RDBMS)</a></li>
+<li>Allison Tharp&rsquo;s blog post, <a href="http://www.techtrek.io/using-schemacrawler-to-generate-a-sqlite-db-graph/">Using SchemaCrawler to Generate a SQLite DB Graph</a></li>
+<li><a href="https://www.linkedin.com/in/adrien-sales">Adrien Sales</a>&rsquo; presentation, <a href="http://dsi-ville-noumea.github.io/presentation-continuous-database/">database continuous deployment and development</a></li>
+<li>Tobias Weis&rsquo; blog, <a href="http://blog.tobias-weis.de/short-schema-diagram-from-an-existing-sqlite-database/">Short: Schema diagram from an existing sqlite database</a></li>
+</ul>
+
+<!-- PAGE CONTENT -- END -->
+
+          </div>
+       </main>
+       <footer class="footer">
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22913512-2"></script>
+          <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'UA-22913512-2');
+          </script>
+          <script>
+            $("table").addClass("table-sm");
+            $("table").addClass("table-bordered");
+            $("table").addClass("table-responsive");
+            $("thead").addClass("thead-dark");						
+          </script>
+
+          <!-- Footer with copyright -->
+          <div class="container-fluid">
+            <hr/>
+
+             <div class="alert alert-info" role="alert">
+               <a href="http://www.schemacrawler.com/">SchemaCrawler</a> is free and open-source software.       
+               <strong><a href="https://www.paypal.me/sualeh">Donations are appreciated.</a></strong>
+            </div>
+            <div id="footer" xmlns:dc="http://purl.org/dc/elements/1.1/"  class="small">
+              <p id="copyright" property="dc:rights">
+                <span>SchemaCrawler, version 14.21.02</span><br />
+                &copy;
+                <span property="dc:dateCopyrighted">2000-2018</span>
+                <span property="dc:creator">Sualeh Fatehi &lt;sualeh@hotmail.com&gt;.</span>
+              </p>
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </div>
+          </div>
+      </footer>
+   </body>
+</html>

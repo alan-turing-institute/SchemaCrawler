@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en-US">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="copyright" content="&copy; 2000-2018 Sualeh Fatehi." />
+      <!-- Begin SEO -->
+      <title>SchemaCrawler - Free database schema discovery and comprehension tool</title>
+      <meta property="og:title" content="SchemaCrawler" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="description" content="Free database schema discovery and comprehension tool" />
+      <meta property="og:description" content="Free database schema discovery and comprehension tool" />
+      <link rel="canonical" href="https://sualeh.github.io/SchemaCrawler/" />
+      <meta property="og:url" content="https://www.SchemaCrawler.com" />
+      <meta property="og:site_name" content="SchemaCrawler" />
+      <script type="application/ld+json">
+         {
+         "name":"SchemaCrawler",
+         "description":"Free database schema discovery and comprehension tool","
+         author":"Sualeh Fatehi",
+         "@type":"WebSite",
+         "url":"https://www.SchemaCrawler.com",
+         "logo":"https://sualeh.github.io/SchemaCrawler/images/schemacrawler_logo.svg",
+         "headline":"SchemaCrawler",
+         "sameAs": [
+             "https://www.facebook.com/schemacrawler/",
+             "https://www.linkedin.com/company/2826059/"
+         ],
+         "@context":"http://schema.org"
+         }
+      </script>
+      <!-- End SEO -->
+      <!-- Bootstrap 4.0 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+         crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+         crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+         crossorigin="anonymous"></script>
+      <!-- Lightbox -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+      <!--  SchemaCrawler styles -->
+      <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+     <header class="header clearfix">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+           <!-- Links -->
+           <ul class="navbar-nav">
+              <li class="nav-item">
+                 <a class="nav-link" href="consulting.html">Consulting</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-1" data-toggle="dropdown">
+                 SchemaCrawler
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">About SchemaCrawler</a>
+                    <a class="dropdown-item" href="readme.html">Readme</a>
+                    <a class="dropdown-item" href="who-uses.html">Who Uses</a>
+                    <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
+                    <a class="dropdown-item" href="database-support.html">Database System Support</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+                    <a class="dropdown-item" href="changes-report.html">Change History</a>
+                    <a class="dropdown-item" href="license.html">License</a>
+                    <a class="dropdown-item" href="building.html">Building From Source Code</a>
+                    <a class="dropdown-item" href="consulting.html">Support and Consulting</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-2" data-toggle="dropdown">
+                 Features
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="output.html">Text Output</a>
+                    <a class="dropdown-item" href="diff.html">Diff</a>
+                    <a class="dropdown-item" href="schemacrawler_grep.html">Grep</a>
+                    <a class="dropdown-item" href="diagramming.html">Diagramming</a>
+                    <a class="dropdown-item" href="scripting.html">Scripting</a>
+                    <a class="dropdown-item" href="lint.html">Lint</a>
+                    <a class="dropdown-item" href="weak-associations.html">Weak Associations</a>
+                    <a class="dropdown-item" href="offline.html">Offline Snapshots</a>
+                    <a class="dropdown-item" href="plugins.html">Plugins</a>
+                    <a class="dropdown-item" href="data-dictionary-extensions.html">Extensions Using the Data Dictionary</a>
+                    <a class="dropdown-item" href="report-maven-plugin.html">SchemaCrawler Report Maven Plugin</a>
+                    <a class="dropdown-item" href="webapp.html">SchemaCrawler Web Application</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-3" data-toggle="dropdown">
+                 Resources
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="readme.html">Getting Started</a>
+                    <a class="dropdown-item" href="resources.html">Resources</a>
+                    <a class="dropdown-item" href="code-examples.html">Code Examples</a>
+                    <a class="dropdown-item" href="faq.html">FAQS</a>
+                    <a class="dropdown-item" href="how-to.html">How-tos</a>
+                    <a class="dropdown-item" href="consulting.html">Get Help</a>
+                    <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler">Project Page on GitHub</a>
+                 </div>
+              </li>
+           </ul>
+        </nav>
+
+        <div id="banner" class="jumbotron jumbotron-fluid bg-light">
+          <div class="container-fluid">
+            <img class="img-fluid" style="display: block; float: left; width: 8.0rem;" src="images/schemacrawler_logo.svg" alt="Schemacrawler logo" />
+            <h1>SchemaCrawler</h1>
+            <p class="lead">Free database schema discovery and comprehension tool</p>
+          </div>
+        </div>
+
+     </header>
+
+     <main>
+        <div id="page-content" class="container-fluid">
+
+<!-- PAGE CONTENT -- START -->
+
+<h1>SchemaCrawler Database Diagramming</h1>
+<p>SchemaCrawler generates database diagrams using <a href="http://www.graphviz.org/">Graphviz</a> in any of the <a href="http://www.graphviz.org/doc/info/output.html">output formats supported by Graphviz</a>. SchemaCrawler is unique among database diagramming tools in that you do not need to know the table names or column names that you are interested in. All you need to know is what to search for, in the form of a regular expression. You can filter out tables, views, and columns based on regular expressions, using <a href="faq.html#whats-schemacrawler-grep">grep</a> functionality. SchemaCrawler has powerful command-line options to match tables, and then find other tables related to the matched ones, whether they are parent or child tables. If your schema changes, you can simply regenerate the diagram, without having to know the exact changes that were made to the schema.</p>
+<p>SchemaCrawler relies on <a href="http://www.graphviz.org/">Graphviz</a> to generate diagrams. Install <a href="http://www.graphviz.org/">Graphviz</a> first, and ensure that it is on the system PATH. If installing <a href="http://www.graphviz.org/">Graphviz</a> is not an option for you, use the pure Java Graphviz library. Instructions are provided with the SchemaCrawler download. Currently, the the pure Java Graphviz library is only able to generate PNG and SVG diagrams.</p>
+<p>Then you can run SchemaCrawler with the correct command-line options - for example, <code>-command=schema -outputformat=png -outputfile=graph.png</code></p>
+<p>See the diagram example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download. An example of a SchemaCrawler database diagram is below.</p>
+<p><a href="diagram-examples/diagram.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram.png" style="width: 200px;" /> </a></p>
+<h2>Database Diagram Options</h2>
+<p>SchemaCrawler offers several options to change what you see on the database diagram. Here are a few variations:</p>
+<ul>
+<li>Suppress schema names and foreign key names, using the <code>-portablenames</code> command-line option. <br /> <a href="diagram-examples/diagram_2_portablenames.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_2_portablenames.png" style="width: 200px;" /> </a></li>
+<li>Show only significant columns, such as primary and foreign key columns, and columns that are part of unique indexes. Use the <code>-infolevel=standard -command=brief</code>command-line option. <br /> <a href="diagram-examples/diagram_3_important_columns.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_3_important_columns.png" style="width: 200px;" /> </a></li>
+<li>Show column ordinals, by setting configuration option <code>schemacrawler.format.show_ordinal_numbers=true</code> in the configuration file. <br /> <a href="diagram-examples/diagram_4_ordinals.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_4_ordinals.png" style="width: 200px;" /> </a></li>
+<li>Display columns in alphabetical order, using the <code>-sortcolumns</code> command-line option. <br /> <a href="diagram-examples/diagram_5_alphabetical.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_5_alphabetical.png" style="width: 200px;" /> </a></li>
+<li>Grep for columns, and also display outgoing relationships, using <code>-grepcolumns=.*\\.BOOKS\\..*\\.ID</code> as a command-line option. <br /> <a href="diagram-examples/diagram_6_grep.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_6_grep.png" style="width: 200px;" /> </a></li>
+<li>Grep for columns, but only show matching tables, using <code>-grepcolumns=.*\\.BOOKS\\..*\\.ID -only-matching</code> as command-line options. <br /> <a href="diagram-examples/diagram_7_grep_onlymatching.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_7_grep_onlymatching.png" style="width: 200px;" /> </a></li>
+<li>Do not show cardinality on the diagrams, to avoid clutter. Set configuration option <code>schemacrawler.graph.show.primarykey.cardinality=false</code> and <code>schemacrawler.graph.show.foreignkey.cardinality=false</code> in the configuration file. <br /> <a href="diagram-examples/diagram_8_no_cardinality.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_8_no_cardinality.png" style="width: 200px;" /> </a></li>
+<li>Show table row counts on the diagrams, set configuration option <code>schemacrawler.format.show_row_counts=true</code> in the configuration file, and use <code>-infolevel=maximum</code> on the command-line. <br /> <a href="diagram-examples/diagram_9_row_counts.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_9_row_counts.png" style="width: 200px;" /> </a></li>
+<li>Do not show catalog and schema colors on the diagrams, set configuration option <code>schemacrawler.format.no_schema_colors=true</code> in the configuration file. <br /> <a href="diagram-examples/diagram_10_no_schema_colors.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_10_no_schema_colors.png" style="width: 200px;" /> </a></li>
+<li>Show a title on the diagram, use <code>-title &quot;Books and Publishers Schema&quot;</code> on the command-line. <br /> <a href="diagram-examples/diagram_11_title.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_11_title.png" style="width: 200px;" /> </a> </a></li>
+<li>Set Graphviz attributes for the graph, node and edge, for example, set configuration option <code>schemacrawler.graph.graphviz.graph.splines=ortho</code> in the configuration file. <br /> <a href="diagram-examples/diagram_12_graphviz_attributes.png" data-lightbox="lightbox" title="SchemaCrawler database diagram"> <img class="img-fluid img-thumbnail" src="diagram-examples/diagram_12_graphviz_attributes.png" style="width: 200px;" /> </a></li>
+</ul>
+<h2>Additional Configuration</h2>
+<h3>Diagram Options</h3>
+<p>You can decide whether foreign-key names, column ordinal numbers, and schema names are displayed by setting the following properties in the SchemaCrawler configuration file, <code>schemacrawler.config.properties</code>.</p>
+<pre><code>schemacrawler.format.show_ordinal_numbers=true
+schemacrawler.format.hide_foreignkey_names=true
+schemacrawler.format.show_unqualified_names=true
+</code></pre>
+<h3>Table Row Counts</h3>
+<p>You can how table row counts on the database diagram, by setting the following properties in the SchemaCrawler configuration file, <code>schemacrawler.config.properties</code>, and using <code>-infolevel=maximum</code></p>
+<pre><code>schemacrawler.format.show_row_counts=true
+</code></pre>
+<h3>Graphviz Command-line Options</h3>
+<p>You can provide additional Graphviz command-line options in one of three ways:</p>
+<ul>
+<li>using the <code>schemacrawler.graph.graphviz_opts</code> property in the SchemaCrawler configuration file,</li>
+<li>by passing in the additional arguments using the <code>SC_GRAPHVIZ_OPTS</code> Java system property,</li>
+<li>or by setting the <code>SC_GRAPHVIZ_OPTS</code> environmental variable.</li>
+</ul>
+<p>SchemaCrawler does not set the dpi, or resolution of generated graphs. A useful Graphviz command-line option to set is <code>-Gdpi=300</code>. In the SchemaCrawler configuration file, <code>schemacrawler.config.properties</code>, this would look like:</p>
+<pre><code>schemacrawler.graph.graphviz_opts=-Gdpi=300
+</code></pre>
+<h3>Embedded Diagrams</h3>
+<p>SchemaCrawler can generate <a href="snapshot-examples/snapshot.svg.html">SVG diagrams embedded in HTML output</a>. To generate this format, run SchemaCrawler with an <code>-outputformat=htmlx</code> command-line argument. Please edit the SchemaCrawler configuration file, <code>schemacrawler.config.properties</code>, and comment out or delete the line <code>schemacrawler.graph.graphviz_opts=-Gdpi=300</code>.</p>
+<h2>Tips</h2>
+<ul>
+<li>Adobe Acrobat Reader sometimes cannot render PDF files generated by GraphViz. In this case, please use another PDF viewer, such as <a href="https://www.foxitsoftware.com/products/pdf-reader/">Foxit</a>.</li>
+<li>To set GraphViz command-line options, edit the SchemaCrawler configuration file, <code>schemacrawler.config.properties</code>, and edit the line with <code>schemacrawler.graph.graphviz_opts</code>.</li>
+</ul>
+<h2>SchemaCrawler Diagrams in Use</h2>
+<p>Schemacrawler database diagrams in use at the Scrum meeting at the Software Development Departement of <a href="http://www.noumea.nc/">La Ville de Nouméa</a>. Photograph courtesy of <a href="https://www.linkedin.com/in/adrien-sales">Adrien Sales</a>.</p>
+<p><a href="images/SchemaCrawler_Noumea.jpg" data-lightbox="sc-in-use" data-title="Schemacrawler database diagrams in use"> <img class="img-fluid img-thumbnail" style="width: 50%" src="images/SchemaCrawler_Noumea.jpg" alt="Schemacrawler database diagrams in use" /> </a></p>
+
+<!-- PAGE CONTENT -- END -->
+
+          </div>
+       </main>
+       <footer class="footer">
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22913512-2"></script>
+          <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'UA-22913512-2');
+          </script>
+          <script>
+            $("table").addClass("table-sm");
+            $("table").addClass("table-bordered");
+            $("table").addClass("table-responsive");
+            $("thead").addClass("thead-dark");						
+          </script>
+
+          <!-- Footer with copyright -->
+          <div class="container-fluid">
+            <hr/>
+
+             <div class="alert alert-info" role="alert">
+               <a href="http://www.schemacrawler.com/">SchemaCrawler</a> is free and open-source software.       
+               <strong><a href="https://www.paypal.me/sualeh">Donations are appreciated.</a></strong>
+            </div>
+            <div id="footer" xmlns:dc="http://purl.org/dc/elements/1.1/"  class="small">
+              <p id="copyright" property="dc:rights">
+                <span>SchemaCrawler, version 14.21.02</span><br />
+                &copy;
+                <span property="dc:dateCopyrighted">2000-2018</span>
+                <span property="dc:creator">Sualeh Fatehi &lt;sualeh@hotmail.com&gt;.</span>
+              </p>
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </div>
+          </div>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en-US">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="copyright" content="&copy; 2000-2018 Sualeh Fatehi." />
+      <!-- Begin SEO -->
+      <title>SchemaCrawler - Free database schema discovery and comprehension tool</title>
+      <meta property="og:title" content="SchemaCrawler" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="description" content="Free database schema discovery and comprehension tool" />
+      <meta property="og:description" content="Free database schema discovery and comprehension tool" />
+      <link rel="canonical" href="https://sualeh.github.io/SchemaCrawler/" />
+      <meta property="og:url" content="https://www.SchemaCrawler.com" />
+      <meta property="og:site_name" content="SchemaCrawler" />
+      <script type="application/ld+json">
+         {
+         "name":"SchemaCrawler",
+         "description":"Free database schema discovery and comprehension tool","
+         author":"Sualeh Fatehi",
+         "@type":"WebSite",
+         "url":"https://www.SchemaCrawler.com",
+         "logo":"https://sualeh.github.io/SchemaCrawler/images/schemacrawler_logo.svg",
+         "headline":"SchemaCrawler",
+         "sameAs": [
+             "https://www.facebook.com/schemacrawler/",
+             "https://www.linkedin.com/company/2826059/"
+         ],
+         "@context":"http://schema.org"
+         }
+      </script>
+      <!-- End SEO -->
+      <!-- Bootstrap 4.0 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+         crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+         crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+         crossorigin="anonymous"></script>
+      <!-- Lightbox -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+      <!--  SchemaCrawler styles -->
+      <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+     <header class="header clearfix">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+           <!-- Links -->
+           <ul class="navbar-nav">
+              <li class="nav-item">
+                 <a class="nav-link" href="consulting.html">Consulting</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-1" data-toggle="dropdown">
+                 SchemaCrawler
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">About SchemaCrawler</a>
+                    <a class="dropdown-item" href="readme.html">Readme</a>
+                    <a class="dropdown-item" href="who-uses.html">Who Uses</a>
+                    <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
+                    <a class="dropdown-item" href="database-support.html">Database System Support</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler/releases/">Download</a>
+                    <a class="dropdown-item" href="changes-report.html">Change History</a>
+                    <a class="dropdown-item" href="license.html">License</a>
+                    <a class="dropdown-item" href="building.html">Building From Source Code</a>
+                    <a class="dropdown-item" href="consulting.html">Support and Consulting</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-2" data-toggle="dropdown">
+                 Features
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="output.html">Text Output</a>
+                    <a class="dropdown-item" href="diff.html">Diff</a>
+                    <a class="dropdown-item" href="schemacrawler_grep.html">Grep</a>
+                    <a class="dropdown-item" href="diagramming.html">Diagramming</a>
+                    <a class="dropdown-item" href="scripting.html">Scripting</a>
+                    <a class="dropdown-item" href="lint.html">Lint</a>
+                    <a class="dropdown-item" href="weak-associations.html">Weak Associations</a>
+                    <a class="dropdown-item" href="offline.html">Offline Snapshots</a>
+                    <a class="dropdown-item" href="plugins.html">Plugins</a>
+                    <a class="dropdown-item" href="data-dictionary-extensions.html">Extensions Using the Data Dictionary</a>
+                    <a class="dropdown-item" href="report-maven-plugin.html">SchemaCrawler Report Maven Plugin</a>
+                    <a class="dropdown-item" href="webapp.html">SchemaCrawler Web Application</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-3" data-toggle="dropdown">
+                 Resources
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="readme.html">Getting Started</a>
+                    <a class="dropdown-item" href="resources.html">Resources</a>
+                    <a class="dropdown-item" href="code-examples.html">Code Examples</a>
+                    <a class="dropdown-item" href="faq.html">FAQS</a>
+                    <a class="dropdown-item" href="how-to.html">How-tos</a>
+                    <a class="dropdown-item" href="consulting.html">Get Help</a>
+                    <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler">Project Page on GitHub</a>
+                 </div>
+              </li>
+           </ul>
+        </nav>
+
+        <div id="banner" class="jumbotron jumbotron-fluid bg-light">
+          <div class="container-fluid">
+            <img class="img-fluid" style="display: block; float: left; width: 8.0rem;" src="images/schemacrawler_logo.svg" alt="Schemacrawler logo" />
+            <h1>SchemaCrawler</h1>
+            <p class="lead">Free database schema discovery and comprehension tool</p>
+          </div>
+        </div>
+
+     </header>
+
+     <main>
+        <div id="page-content" class="container-fluid">
+
+<!-- PAGE CONTENT -- START -->
+
+<h1>SchemaCrawler - Frequently Asked Questions</h1>
+<h2>General</h2>
+<ol>
+<li><a href="#whats-schemacrawler">What is SchemaCrawler?</a></li>
+<li><a href="#output">What does SchemaCrawler output look like?</a></li>
+<li><a href="#commands">What are the SchemaCrawler commands?</a></li>
+<li><a href="#config">What does a SchemaCrawler configuration file look like?</a></li>
+</ol>
+<h2>Supported Platforms</h2>
+<ol>
+<li><a href="#supported-databases">What databases does SchemaCrawler work with?</a></li>
+<li><a href="#supported-java">What Java version does SchemaCrawler work with?</a></li>
+<li><a href="#supported-os">What operating systems does SchemaCrawler work with?</a></li>
+<li><a href="#ant">Can SchemaCrawler be used with ant?</a></li>
+<li><a href="#maven">Can SchemaCrawler be used with Apache Maven?</a></li>
+</ol>
+<h2>SchemaCrawler Database Diagrams</h2>
+<ol>
+<li><a href="#diagrams">What is a SchemaCrawler database diagram?</a></li>
+<li><a href="#diagram-output">What does a SchemaCrawler database diagram look like?</a></li>
+</ol>
+<h2>SchemaCrawler Grep</h2>
+<ol>
+<li><a href="#whats-schemacrawler-grep">What is SchemaCrawler Grep?</a></li>
+<li><a href="#grep-output">What does SchemaCrawler Grep output look like?</a></li>
+<li><a href="#grepcommands">What are the SchemaCrawler Grep commands?</a></li>
+<li><a href="#config">What does a SchemaCrawler configuration file look like?</a></li>
+</ol>
+<h2>SchemaCrawler Features</h2>
+<ol>
+<li><a href="#schema-lint">What is SchemaCrawler Lint?</a></li>
+<li><a href="#weak-associations">What are weak associations?</a></li>
+<li><a href="#scripting">Can SchemaCrawler be used with scripting languages?</a></li>
+<li><a href="#api">Can SchemaCrawler be used programmatically?</a></li>
+<li><a href="#integrations">Can SchemaCrawler be used integrated with other programs?</a></li>
+</ol>
+<h2>Distribution</h2>
+<ol>
+<li><a href="#availibility">Where is SchemaCrawler available?</a></li>
+<li><a href="#tech-support">Is technical support available?</a></li>
+<li><a href="#cost">Is SchemaCrawler free?</a></li>
+</ol>
+<h2>General</h2>
+<hr />
+<h3><a name="whats-schemacrawler">What is SchemaCrawler?</a></h3>
+<p>SchemaCrawler is an open-source Java API that makes working with database metadata as easy as working with plain old Java objects. SchemaCrawler is also a command-line tool to output your database schema and data in a readable form. The output is designed to be <a href="http://en.wikipedia.org/wiki/Diff">diff-ed</a> with previous versions of your database schema.</p>
+<hr />
+<h3><a name="output">What does SchemaCrawler output look like?</a></h3>
+<p>SchemaCrawler can produce <a href="snapshot-examples/snapshot.text">plain text,</a> <a href="snapshot-examples/snapshot.csv">comma-separated text (CSV),</a> <a href="snapshot-examples/snapshot.html">HTML5,</a> or <a href="snapshot-examples/snapshot.json">JavaScript object notation (JSON).</a> The HTML5 output is a combination of valid XML (that can be manipulated by XML tools or XSLT), and HTML that can be viewed in a browser. SchemaCrawler can produce output in the <a href="http://www.graphviz.org/doc/info/lang.html">DOT format,</a> which <a href="http://www.graphviz.org/">Graphviz</a> can convert into <a href="diagramming.html">schema diagrams.</a></p>
+<hr />
+<h3><a name="commands">What are the SchemaCrawler commands?</a></h3>
+<p>The easiest way to see the SchemaCrawler commands is to download and install SchemaCrawler, and run the provided scripts (<code>schemacrawler.sh</code> on Unix, and <code>schemacrawler.cmd</code> on Windows). Detailed command-line help will be displayed.</p>
+<p>SchemaCrawler can produce listings, and standard, or verbose details of your schema. The brief schema option gives you just table, view, stored procedure and function names. The standard schema option gives you the column names and primary keys. The verbose schema option will give you details of data types, indexes, primary and foreign keys, view, stored procedure and function definitions. The SchemaCrawler command can be combined with an <em>infolevel</em> , which determines the level of detail of schema metadata obtained. The maximum infolevel will give you privileges, triggers definitions, and check constraints. Each successive option takes more time to execute.</p>
+<p>SchemaCrawler provides commands for producing graphs and running templates, if the appropriate extensions are installed.</p>
+<p>SchemaCrawler can also manipulate your data. You can get counts of the rows in tables and views. SchemaCrawler can output all the data in your tables and views, or run specific SQL statements against table and views. SchemaCrawler can be fine-tuned using configuration files.</p>
+<hr />
+<h3><a name="config">What does a SchemaCrawler configuration file look like?</a></h3>
+<p>An example of a <a href="config/schemacrawler.config.properties">SchemaCrawler configuration file.</a></p>
+<hr />
+<h2>Supported Platforms</h2>
+<hr />
+<h3><a name="supported-databases">What databases does SchemaCrawler work with?</a></h3>
+<p>SchemaCrawler supports any database for which there is a JDBC database driver available. SchemaCrawler has been tested with various databases, and JDBC drivers. For more information, see <a href="database-support.html">Database System Support.</a></p>
+<hr />
+<h3><a name="supported-java">What Java version does SchemaCrawler work with?</a></h3>
+<p>SchemaCrawler works with Java SE 8, Compact Profile 2 or better. SchemaCrawler does not depend on any Java libraries other than the standard Java SE 8, Compact Profile 2 runtime libraries and a JDBC driver.</p>
+<hr />
+<h3><a name="supported-os">What operating systems does SchemaCrawler work with?</a></h3>
+<p>SchemaCrawler works with any operating system that supports Java SE 8, Compact Profile 2 or better.</p>
+<hr />
+<h3><a name="ant">Can SchemaCrawler be used with ant?</a></h3>
+<p>Yes, the SchemaCrawler command-line can be called from ant, using the exec task.</p>
+<hr />
+<h3><a name="maven">Can SchemaCrawler be used with Apache Maven?</a></h3>
+<p>Yes SchemaCrawler can be used in a Apache Maven project as an API, or to generate Apache Maven reports in your projects. In order to use SchemaCrawler in your Apache Maven projects, simply add a dependency to SchemaCrawler in your pom.xml. <em>For more details, see the <a href="plugins.html">plugins</a> page.</em></p>
+<p>Using the <a href="https://github.com/schemacrawler/SchemaCrawler-Report-Maven-Plugin">SchemaCrawler Report Maven Plugin</a> , you can generate a SchemaCrawler report along with other reports for your Apache Maven generated site.</p>
+<hr />
+<h2>SchemaCrawler Database Diagrams</h2>
+<hr />
+<h3><a name="diagrams">What is a SchemaCrawler database diagram?</a></h3>
+<p>SchemaCrawler can generate entity-relationship database diagrams using <a href="http://www.graphviz.org/">Graphviz</a> . You can filter out tables, columns, stored procedure and functions based on regular expressions, using the <a href="#whats-schemacrawler-grep">grep</a> functionality. <em>For more details, see the <a href="diagramming.html">diagramming</a> page.</em></p>
+<hr />
+<h3><a name="diagram-output">What does a SchemaCrawler database diagram look like?</a></h3>
+<p>An example of a SchemaCrawler database diagram: <a href="images/diagram.png" title="SchemaCrawler database diagram"><img src="images/diagram.png" alt="" /></a></p>
+</dl>
+<h2>SchemaCrawler Grep</h2>
+<h3><a name="whats-schemacrawler-grep">What is SchemaCrawler Grep?</a></h3>
+<p>SchemaCrawler Grep is a set of SchemaCrawler command-line options that allow you to search your database schema for tables and columns that match a regular expression, much like the standard <a href="http://en.wikipedia.org/wiki/Grep">grep</a> tool.</p>
+<hr />
+<h3><a name="grep-output">What does SchemaCrawler Grep output look like?</a></h3>
+<p>SchemaCrawler Grep output is the same as the SchemaCrawler text output.</p>
+<hr />
+<h3><a name="grepcommands">What are the SchemaCrawler Grep commands?</a></h3>
+<p>See the <a href="#commands">filtering and grep command-line options</a> above.</p>
+<hr />
+<h3><a name="config">What does a SchemaCrawler configuration file look like?</a></h3>
+<p>The SchemaCrawler Grep configuration file is the same as the <a href="config/schemacrawler.config.properties">SchemaCrawler configuration file.</a></p>
+<hr />
+<h2>SchemaCrawler Features</h2>
+<hr />
+<h3><a name="schema-lint">What is SchemaCrawler Lint?</a></h3>
+<p>SchemaCrawler can analyze and <a href="http://en.wikipedia.org/wiki/Lint_(software)">lint</a> your database schema design to find potential issues. SchemaCrawler Lint can be run using the <code>-command=lint</code> command-line option. <em>For more details, look at the <a href="lint.html">SchemaCrawler Lint</a> page.</em></p>
+<hr />
+<h3><a name="weak-associations">What are weak associations?</a></h3>
+<p>Weak associations are inferred associations between tables, similar to foreign keys, even if there is no foreign key defined in the database schema between the tables. <em>For more details, look at the <a href="weak-associations.html">Weak Associations</a> page.</em></p>
+<hr />
+<h3><a name="scripting">Can SchemaCrawler be used with scripting languages?</a></h3>
+<p>SchemaCrawler has built-in support to be used with JavaScript scripts. SchemaCrawler can be integrated with any other scripting language, for example, Groovy, Ruby, Python, and more.</p>
+<p>Also, look at the <a href="scripting.html">scripting</a> page.</p>
+<p><em>For more details, see scripting example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download, in the <code>examples\javascript</code>, <code>examples\groovy</code>, <code>examples\ruby</code> and <code>examples\python</code> directories.</em></p>
+<hr />
+<h3><a name="api">Can SchemaCrawler be used programmatically?</a></h3>
+<p>SchemaCrawler is an API that improves on the standard JDBC metadata facilities. SchemaCrawler provides an easy to use set of plain old Java objects (POJOs) that represent your database schema.</p>
+<p>Read <a href="http://www.devx.com/Java/Article/32443">Java API Makes Database Metadata as Easily Accessible as POJOs</a> for an introduction to the SchemaCrawler API. (This article may refer to an older release of the SchemaCrawler API, but the concepts are the same.) You can also browse the <a href="apidocs/index.html">javadocs</a>.</p>
+<p><em>For more details, see scripting example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download, in the <code>examples\api</code> directory.</em></p>
+<hr />
+<h3><a name="integrations">Can SchemaCrawler be used integrated with other programs?</a></h3>
+<p>SchemaCrawler can be integrated with other programs, but this requires some Java programming. SchemaCrawler is designed to be used programmatically with the <a href="https://spring.io/">Spring Framework</a> . For more details, see scripting example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download, in the <code>examples\spring</code> directory.</p>
+<p>SchemaCrawler comes pre-built with integration with <a href="http://velocity.apache.org/">Apache Velocity.</a> This allows you to specify your own templates for formatting the schema. For more details, see scripting example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download, in the <code>examples\velocity</code> directory.</p>
+</dl>
+<h2>Distribution</h2>
+<h3><a name="availibility">Where is SchemaCrawler available?</a></h3>
+<p>SchemaCrawler is available as a download from <a href="https://github.com/schemacrawler/SchemaCrawler/releases">GitHub</a> .</p>
+<hr />
+<h3><a name="tech-support">Is technical support available?</a></h3>
+<p>Yes. Please see <a href="consulting.html">Support and Consulting</a> for details.</p>
+<hr />
+<h3><a name="cost">Is SchemaCrawler free?</a></h3>
+<p>See <a href="license.html">SchemaCrawler license</a> for details.</p>
+
+<!-- PAGE CONTENT -- END -->
+
+          </div>
+       </main>
+       <footer class="footer">
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22913512-2"></script>
+          <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'UA-22913512-2');
+          </script>
+          <script>
+            $("table").addClass("table-sm");
+            $("table").addClass("table-bordered");
+            $("table").addClass("table-responsive");
+            $("thead").addClass("thead-dark");						
+          </script>
+
+          <!-- Footer with copyright -->
+          <div class="container-fluid">
+            <hr/>
+
+             <div class="alert alert-info" role="alert">
+               <a href="http://www.schemacrawler.com/">SchemaCrawler</a> is free and open-source software.       
+               <strong><a href="https://www.paypal.me/sualeh">Donations are appreciated.</a></strong>
+            </div>
+            <div id="footer" xmlns:dc="http://purl.org/dc/elements/1.1/"  class="small">
+              <p id="copyright" property="dc:rights">
+                <span>SchemaCrawler, version 14.21.02</span><br />
+                &copy;
+                <span property="dc:dateCopyrighted">2000-2018</span>
+                <span property="dc:creator">Sualeh Fatehi &lt;sualeh@hotmail.com&gt;.</span>
+              </p>
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </div>
+          </div>
+      </footer>
+   </body>
+</html>
