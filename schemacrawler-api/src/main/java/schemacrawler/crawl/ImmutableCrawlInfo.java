@@ -46,7 +46,7 @@ import schemacrawler.schema.SchemaCrawlerInfo;
  *
  * @author Sualeh Fatehi sualeh@hotmail.com
  */
-final class ImmutableCrawlInfo
+public final class ImmutableCrawlInfo
   implements CrawlInfo
 {
 

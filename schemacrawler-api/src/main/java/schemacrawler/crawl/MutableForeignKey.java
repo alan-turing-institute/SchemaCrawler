@@ -51,7 +51,7 @@ import schemacrawler.utility.CompareUtility;
  *
  * @author Sualeh Fatehi
  */
-final class MutableForeignKey
+public final class MutableForeignKey
   extends AbstractNamedObjectWithAttributes
   implements ForeignKey
 {

@@ -57,7 +57,7 @@ import schemacrawler.schema.Table;
  *
  * @author Sualeh Fatehi sualeh@hotmail.com
  */
-final class MutableCatalog
+public final class MutableCatalog
   extends AbstractNamedObjectWithAttributes
   implements Catalog, Reducible
 {

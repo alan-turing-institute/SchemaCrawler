@@ -57,7 +57,7 @@ import schemacrawler.utility.NamedObjectSort;
  *
  * @author Sualeh Fatehi
  */
-class MutableTable
+public class MutableTable
   extends AbstractDatabaseObject
   implements Table
 {

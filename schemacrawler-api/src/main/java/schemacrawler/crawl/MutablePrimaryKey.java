@@ -39,7 +39,7 @@ import schemacrawler.schema.TableConstraintType;
  *
  * @author Sualeh Fatehi
  */
-final class MutablePrimaryKey
+public final class MutablePrimaryKey
   extends MutableIndex
   implements PrimaryKey
 {
