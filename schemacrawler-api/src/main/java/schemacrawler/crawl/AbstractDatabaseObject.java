@@ -45,7 +45,7 @@ import schemacrawler.utility.Identifiers;
  *
  * @author Sualeh Fatehi
  */
-abstract class AbstractDatabaseObject
+public abstract class AbstractDatabaseObject
   extends AbstractNamedObjectWithAttributes
   implements DatabaseObject
 {
