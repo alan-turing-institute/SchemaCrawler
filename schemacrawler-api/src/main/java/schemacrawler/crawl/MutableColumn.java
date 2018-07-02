@@ -43,7 +43,7 @@ import schemacrawler.schema.Table;
  *
  * @author Sualeh Fatehi
  */
-final class MutableColumn
+public final class MutableColumn
   extends AbstractColumn<Table>
   implements Column
 {
