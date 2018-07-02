@@ -60,7 +60,7 @@ final class MutableColumn
   private Column referencedColumn;
   private final NamedObjectList<MutablePrivilege<Column>> privileges = new NamedObjectList<>();
 
-  MutableColumn(final Table parent, final String name)
+  public MutableColumn(final Table parent, final String name)
   {
     super(new TableReference(parent), name);
   }
