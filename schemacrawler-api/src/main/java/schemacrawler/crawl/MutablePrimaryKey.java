@@ -52,7 +52,7 @@ public final class MutablePrimaryKey
    * @param index
    *        Index
    */
-  MutablePrimaryKey(final MutableIndex index)
+  public MutablePrimaryKey(final MutableIndex index)
   {
     super(index.getParent(), index.getName());
     setCardinality(index.getCardinality());

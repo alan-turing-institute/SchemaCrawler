@@ -66,7 +66,7 @@ public final class MutableForeignKey
   private ForeignKeyDeferrability deferrability;
   private final StringBuilder definition;
 
-  MutableForeignKey(final String name)
+  public MutableForeignKey(final String name)
   {
     super(name);
 
@@ -202,9 +202,9 @@ public final class MutableForeignKey
     return lookupKey;
   }
 
-  void addColumnReference(final int keySequence,
-                          final Column pkColumn,
-                          final Column fkColumn)
+  public void addColumnReference(final int keySequence,
+                                 final Column pkColumn,
+                                 final Column fkColumn)
   {
     final MutableForeignKeyColumnReference fkColumnReference = new MutableForeignKeyColumnReference(keySequence,
                                                                                                     pkColumn,

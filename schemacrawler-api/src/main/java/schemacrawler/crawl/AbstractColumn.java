@@ -187,7 +187,7 @@ abstract class AbstractColumn<P extends DatabaseObject>
     return nullable;
   }
 
-  final void setColumnDataType(final ColumnDataType columnDataType)
+  public final void setColumnDataType(final ColumnDataType columnDataType)
   {
     this.columnDataType = columnDataType;
   }

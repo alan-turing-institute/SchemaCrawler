@@ -47,7 +47,7 @@ import sf.util.StringFormat;
  *
  * @author Sualeh Fatehi
  */
-final class MutableColumnDataType
+public final class MutableColumnDataType
   extends AbstractDatabaseObject
   implements ColumnDataType
 {
@@ -77,7 +77,7 @@ final class MutableColumnDataType
   private int numPrecisionRadix; // usually 2 or 10
   private ColumnDataType baseType;
 
-  MutableColumnDataType(final Schema schema, final String name)
+  public MutableColumnDataType(final Schema schema, final String name)
   {
     super(schema, name);
 

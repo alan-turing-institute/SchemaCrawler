@@ -63,7 +63,7 @@ public abstract class AbstractDatabaseObject
    * @param name
    *        Name of the named object
    */
-  AbstractDatabaseObject(final Schema schema, final String name)
+  protected AbstractDatabaseObject(final Schema schema, final String name)
   {
     super(name);
     this.schema = requireNonNull(schema, "No schema provided");

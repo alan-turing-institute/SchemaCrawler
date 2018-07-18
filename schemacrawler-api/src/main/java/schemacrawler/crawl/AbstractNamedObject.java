@@ -41,7 +41,7 @@ import schemacrawler.utility.NamedObjectSort;
  *
  * @author Sualeh Fatehi
  */
-abstract class AbstractNamedObject
+public abstract class AbstractNamedObject
   implements NamedObject
 {
 
@@ -56,7 +56,7 @@ abstract class AbstractNamedObject
    * @param name
    *        Name of the named object
    */
-  AbstractNamedObject(final String name)
+  protected AbstractNamedObject(final String name)
   {
     this.name = name;
   }

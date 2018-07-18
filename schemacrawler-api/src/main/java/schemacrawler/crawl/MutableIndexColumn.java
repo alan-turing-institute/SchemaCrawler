@@ -40,7 +40,7 @@ import schemacrawler.schema.NamedObject;
 import schemacrawler.schema.Privilege;
 import schemacrawler.schema.Table;
 
-final class MutableIndexColumn
+public final class MutableIndexColumn
   extends AbstractDependantObject<Table>
   implements IndexColumn
 {
@@ -53,7 +53,7 @@ final class MutableIndexColumn
   private IndexColumnSortSequence sortSequence;
   private final StringBuilder definition;
 
-  MutableIndexColumn(final Index index, final Column column)
+  public MutableIndexColumn(final Index index, final Column column)
   {
     super(new TableReference(column.getParent()), column.getName());
     this.index = index;

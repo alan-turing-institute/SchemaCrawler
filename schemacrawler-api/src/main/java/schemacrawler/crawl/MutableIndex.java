@@ -48,7 +48,7 @@ import schemacrawler.utility.CompareUtility;
  *
  * @author Sualeh Fatehi
  */
-class MutableIndex
+public class MutableIndex
   extends AbstractDependantObject<Table>
   implements Index
 {
@@ -62,7 +62,7 @@ class MutableIndex
   private int pages;
   private final StringBuilder definition;
 
-  MutableIndex(final Table parent, final String name)
+  public MutableIndex(final Table parent, final String name)
   {
     super(new TableReference(parent), name);
     // Default values
@@ -205,7 +205,7 @@ class MutableIndex
     return columns.lookup(this.getParent(), name);
   }
 
-  final void addColumn(final MutableIndexColumn column)
+  public final void addColumn(final MutableIndexColumn column)
   {
     columns.add(column);
   }
