@@ -174,7 +174,7 @@ public final class MutableColumn
     isPartOfIndex = true;
   }
 
-  void markAsPartOfPrimaryKey()
+  public void markAsPartOfPrimaryKey()
   {
     isPartOfPrimaryKey = true;
   }
@@ -204,7 +204,7 @@ public final class MutableColumn
     this.isHidden = isHidden;
   }
 
-  void setReferencedColumn(final Column referencedColumn)
+  public void setReferencedColumn(final Column referencedColumn)
   {
     this.referencedColumn = referencedColumn;
   }
